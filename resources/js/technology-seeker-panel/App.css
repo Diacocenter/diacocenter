@@ -1,0 +1,80 @@
+@import "../technology-provider-panel/views/scss/technology-provider-panel.scss";
+
+/* <div class="scrollbar" id="style-1">
+  <div class="force-overflow"></div>
+</div> */
+
+.scrollbar {
+    overflow-y: auto;
+    padding-right: 0.25rem;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #999999;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border: 3.5px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+    width: 7px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #333333;
+}
+
+
+.scrollbarThin {
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.scrollbarThin::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: #999999;
+}
+
+.scrollbarThin::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+}
+
+.scrollbarThin::-webkit-scrollbar-thumb {
+    border: 1.5px solid transparent;
+    background-clip: content-box;
+    border-radius: 5px;
+    width: 3.5px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    background-color: #333333;
+}
+
+
+.dzu-dropzone {
+    overflow: hidden;
+    border: 0;
+    height: 100%;
+    min-height: 40px;
+}
+.dzu-previewContainer{
+    flex-direction: column;
+    padding: 0;
+}
+.dzu-submitButton{
+    display: none;
+}
+.dzu-submitButtonContainer{
+    display: none;
+}
+.dzu-previewImage{
+    max-width : 300px;
+    max-height : 200px;
+    margin-bottom: 5%;
+    border-radius: 7px;
+}

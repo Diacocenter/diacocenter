@@ -1,0 +1,187 @@
+/*=============================================================== */
+/* Start BebasNeuePro and Roboto Web Fonts */
+/*=============================================================== */
+
+
+@font-face {
+    font-family: BebasNeueProLight;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./Bebas-Neue-Pro/light/BebasNeueProLight.eot'); /* IE9 Compat Modes */
+    src: url('./Bebas-Neue-Pro/light/BebasNeueProLight.otf') format('otf'), /* IE6-8 */
+    url('./Bebas-Neue-Pro/light/BebasNeueProLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Bebas-Neue-Pro/light/BebasNeueProLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Bebas-Neue-Pro/light/BebasNeueProLight.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Bebas-Neue-Pro/light/BebasNeueProLight.svg') format('svg'); /* Legacy iOS */
+}
+
+
+@font-face {
+    font-family: BebasNeueProLight;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.eot'); /* IE9 Compat Modes */
+    src: url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.otf') format('otf'), /* IE6-8 */
+    url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Bebas-Neue-Pro/Regular/BebasNeueProRegular.svg') format('svg'); /* Legacy iOS */
+}
+
+
+@font-face {
+    font-family: BebasNeueProLight;
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./Bebas-Neue-Pro/bold/BebasNeueProBold.eot'); /* IE9 Compat Modes */
+    src: url('./Bebas-Neue-Pro/bold/BebasNeueProBold.otf') format('otf'), /* IE6-8 */
+    url('./Bebas-Neue-Pro/bold/BebasNeueProBold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Bebas-Neue-Pro/bold/BebasNeueProBold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Bebas-Neue-Pro/bold/BebasNeueProBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Bebas-Neue-Pro/bold/BebasNeueProBold.svg') format('svg'); /* Legacy iOS */
+}
+
+/*=============================================================== */
+/* Start Montserrat and Roboto Web Fonts */
+/*=============================================================== */
+
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./Montserrat/light/Montserrat-Light.eot'); /* IE9 Compat Modes */
+    src: url('./Montserrat/light/Montserrat-Light.otf') format('otf'), /* IE6-8 */
+    url('./Montserrat/light/Montserrat-Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Montserrat/light/Montserrat-Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Montserrat/light/Montserrat-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Montserrat/light/Montserrat-Light.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./Montserrat/Regular/Montserrat-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./Montserrat/Regular/Montserrat-Regular.otf') format('otf'), /* IE6-8 */
+    url('./Montserrat/Regular/Montserrat-Regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Montserrat/Regular/Montserrat-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Montserrat/Regular/Montserrat-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Montserrat/Regular/Montserrat-Regular.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./Montserrat/medium/Montserrat-Medium.eot'); /* IE9 Compat Modes */
+    src: url('./Montserrat/medium/Montserrat-Medium.otf') format('otf'), /* IE6-8 */
+    url('./Montserrat/medium/Montserrat-Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Montserrat/medium/Montserrat-Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Montserrat/medium/Montserrat-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Montserrat/medium/Montserrat-Medium.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./Montserrat/bold/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+    src: url('./Montserrat/bold/Montserrat-Bold.otf') format('otf'), /* IE6-8 */
+    url('./Montserrat/bold/Montserrat-Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Montserrat/bold/Montserrat-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Montserrat/bold/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Montserrat/bold/Montserrat-Bold.svg') format('svg'); /* Legacy iOS */
+}
+
+
+/*=============================================================== */
+/* Start Inter and Roboto Web Fonts */
+/*=============================================================== */
+
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./Inter/thin/Inter-Thin.eot'); /* IE9 Compat Modes */
+    src: url('./Inter/thin/Inter-Thin.otf') format('otf'), /* IE6-8 */
+    url('./Inter/thin/Inter-Thin.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Inter/thin/Inter-Thin.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Inter/thin/Inter-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Inter/thin/Inter-Thin.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./Inter/Regular/Inter-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./Inter/Regular/Inter-Regular.otf') format('otf'), /* IE6-8 */
+    url('./Inter/Regular/Inter-Regular.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Inter/Regular/Inter-Regular.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Inter/Regular/Inter-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Inter/Regular/Inter-Regular.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./Inter/medium/Inter-Medium.eot'); /* IE9 Compat Modes */
+    src: url('./Inter/medium/Inter-Medium.otf') format('otf'), /* IE6-8 */
+    url('./Inter/medium/Inter-Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Inter/medium/Inter-Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Inter/medium/Inter-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Inter/medium/Inter-Medium.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url('./Inter/bold/Inter-Bold.eot'); /* IE9 Compat Modes */
+    src: url('./Inter/bold/Inter-Bold.otf') format('otf'), /* IE6-8 */
+    url('./Inter/bold/Inter-Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./Inter/bold/Inter-Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./Inter/bold/Inter-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Inter/bold/Inter-Bold.svg') format('svg'); /* Legacy iOS */
+}
+
+//@font-face {
+//    font-family: Icomoon;
+//    font-style: normal;
+//    font-weight: 400;
+//    font-display: swap;
+//    src: url("./fonts/icomoon.eot");
+//    src: url("./fonts/icomoon.woff")format("woff"),
+//    url("./fonts/icomoon.ttf") format("truetype"),
+//    url("./fonts/icomoon.svg") format("svg");
+//}
+
+$font-family-sans-serif: Roboto, BebasNeueProLight, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", serif;
+
+.Montserrat {
+    font-family: Montserrat, sans-serif;
+}
+
+.BebasNeueProLight {
+    font-family: BebasNeueProLight, sans-serif;
+}
+.Inter{
+    font-family: Inter, sans-serif;
+
+}
+
+

@@ -1,0 +1,13 @@
+/* FontAwesome - START */
+$fa-font-path: "./fontawesome/webfonts"; // destination folder in dist
+@import "./fontawesome/scss/fontawesome";
+@import "./fontawesome/scss/brands";
+@import "./fontawesome/scss/duotone";
+@import "./fontawesome/scss/light";
+@import "./fontawesome/scss/thin";
+@import "./fontawesome/scss/regular";
+@import "./fontawesome/scss/solid";
+/* FontAwesome - END */
+
+@import "fontawesome/css/all.css";
+@import "fontawesome/css/all.min.css";

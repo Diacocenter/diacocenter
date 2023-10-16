@@ -1,0 +1,260 @@
+/*!
+Theme Name: Diaco
+Theme URI: https://diaco.com
+Author: Iman Nasr Esfahani
+Author URI: https://diaco.com
+Description: Diaco Dedicated Theme
+Requires at least: 8.1
+Tested up to: 8.1
+Requires PHP: 8.1
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:diaco.test
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-languages-support, sticky-post, threaded-comments
+!*/
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,400;8..30,500;8..30,600;8..30,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import "splide";
+
+// @import "./font.awesome";
+
+// @import "./bootstrap";
+
+// @import "./custom";
+// @import "./variables";
+
+// // Components
+@import "loading";
+@import "componentsStyle";
+
+// @import "bootstrap-select/dist/css/bootstrap-select.min.css";
+// @import "animate.css/animate.css";
+
+@font-face {
+    font-family: "icomoon";
+    src: url("fonts/icomoon.eot?4dtprx");
+    src: url("fonts/icomoon.eot?4dtprx#iefix") format("embedded-opentype"),
+        url("fonts/icomoon.ttf?4dtprx") format("truetype"),
+        url("fonts/icomoon.woff?4dtprx") format("woff"),
+        url("fonts/icomoon.svg?4dtprx#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-france:before {
+    content: "\e900";
+}
+.icon-google:before {
+    content: "\e901";
+}
+.icon-add-person:before {
+    content: "\e902";
+    color: #5b5b5b;
+}
+.icon-support:before {
+    content: "\e903";
+    color: #5b5b5b;
+}
+.icon-activities:before {
+    content: "\e904";
+    color: #5b5b5b;
+}
+.icon-suitcase:before {
+    content: "\e905";
+    color: #5b5b5b;
+}
+.icon-alert:before {
+    content: "\e906";
+    color: #5b5b5b;
+}
+.icon-upload:before {
+    content: "\e907";
+    color: #5b5b5b;
+}
+.icon-notification:before {
+    content: "\e908";
+    color: #5b5b5b;
+}
+.icon-logout:before {
+    content: "\e909";
+    color: #5b5b5b;
+}
+.icon-explor:before {
+    content: "\e90a";
+    color: #5b5b5b;
+}
+.icon-search:before {
+    content: "\e90b";
+    color: #5b5b5b;
+}
+.icon-edit:before {
+    content: "\e90c";
+    color: #5b5b5b;
+}
+.icon-play:before {
+    content: "\e90d";
+    color: #5b5b5b;
+}
+.icon-project:before {
+    content: "\e90e";
+    color: #5b5b5b;
+}
+.icon-menu:before {
+    content: "\e90f";
+    color: #5b5b5b;
+}
+.icon-calender:before {
+    content: "\e910";
+    color: #5b5b5b;
+}
+.icon-home:before {
+    content: "\e911";
+    color: #5b5b5b;
+}
+.icon-agreement:before {
+    content: "\e912";
+    color: #5b5b5b;
+}
+.icon-download:before {
+    content: "\e913";
+    color: #5b5b5b;
+}
+.icon-trash:before {
+    content: "\e914";
+    color: #5b5b5b;
+}
+.icon-phone:before {
+    content: "\e915";
+    color: #5b5b5b;
+}
+.icon-key:before {
+    content: "\e916";
+    color: #5b5b5b;
+}
+.icon-chat:before {
+    content: "\e917";
+    color: #5b5b5b;
+}
+.icon-security:before {
+    content: "\e918";
+    color: #5b5b5b;
+}
+.icon-add:before {
+    content: "\e919";
+    color: #5b5b5b;
+}
+.icon-whatsapp:before {
+    content: "\e91a";
+    //color: #5b5b5b;
+}
+.icon-check:before {
+    content: "\e91b";
+    color: #5b5b5b;
+}
+.icon-wallet:before {
+    content: "\e91c";
+    color: #5b5b5b;
+}
+.icon-dashboard:before {
+    content: "\e91d";
+    color: #5b5b5b;
+}
+.icon-email:before {
+    content: "\e91e";
+    //color: #5b5b5b;
+}
+.icon-Facebook:before {
+    content: "\e91f";
+    //color: #5b5b5b;
+}
+.icon-linkedin:before {
+    content: "\e920";
+    //color: #5b5b5b;
+}
+.icon-insta:before {
+    content: "\e921";
+    //color: #5b5b5b;
+}
+
+// Default theme
+@import "@splidejs/splide/css";
+// or other themes
+@import "@splidejs/splide/css/skyblue";
+@import "@splidejs/splide/css/sea-green";
+// or only core styles
+@import "@splidejs/splide/css/core";
+
+.my-carousel-progress {
+    background: #ccc;
+}
+
+.my-carousel-progress-bar {
+    background: greenyellow;
+    height: 2px;
+    transition: width 400ms ease;
+    width: 0;
+}
+#logo {
+    display: none;
+}
+
+.splide {
+    padding: 0px;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+//@media screen and (max-width: 1024px) {
+//    .splide__pagination {
+//        margin-bottom: -50px;
+//    }
+//}
+//
+//@media screen and (max-width: 1024px) {
+//    .splide__arrow {
+//        display: none;
+//    }
+//}
+
+.list {
+    letter-spacing: 0;
+    text-align: left;
+    list-style: quote;
+}
+
+
+.team-box {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+}

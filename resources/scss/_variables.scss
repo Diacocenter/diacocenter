@@ -1,0 +1,50 @@
+
+/*rtl:ignore*/
+.dir-ltr {
+    direction: ltr;
+}
+
+/*rtl:ignore*/
+.dir-rtl {
+    direction: rtl;
+}
+
+.z-index-100 {
+    z-index: 100;
+}
+
+.z-index-150 {
+    z-index: 150;
+}
+
+.z-index-200 {
+    z-index: 200;
+}
+
+.z-index-n-100 {
+    z-index: -100;
+}
+
+.z-index-n-150 {
+    z-index: -150;
+}
+
+.z-index-n-200 {
+    z-index: -200;
+}
+
+.no-resize {
+    resize: none;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-no-repeat {
+    background-repeat: no-repeat;
+}
+
+select:focus {
+    outline:none;
+}

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Bebas Neue Pro Light';
+  src: url(./Bebas+Neue+Pro+Light.eot);
+  src: url(./Bebas+Neue+Pro+Light.eot?#iefix) format('embedded-opentype'),
+       url(./Bebas+Neue+Pro+Light.otf) format('otf'),
+       url(./Bebas+Neue+Pro+Light.svg#Bebas%20Neue%20Pro%20Light) format('svg'),
+       url(./Bebas+Neue+Pro+Light.ttf) format('truetype'),
+       url(./Bebas+Neue+Pro+Light.woff) format('woff'),
+       url(./Bebas+Neue+Pro+Light.woff2) format('woff2');
+}

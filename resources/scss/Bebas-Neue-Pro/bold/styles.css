@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Bebas Neue Pro Bold';
+  src: url(./Bebas+Neue+Pro+Bold.eot);
+  src: url(./Bebas+Neue+Pro+Bold.eot?#iefix) format('embedded-opentype'),
+       url(./Bebas+Neue+Pro+Bold.otf) format('otf'),
+       url(./Bebas+Neue+Pro+Bold.svg#Bebas%20Neue%20Pro%20Bold) format('svg'),
+       url(./Bebas+Neue+Pro+Bold.ttf) format('truetype'),
+       url(./Bebas+Neue+Pro+Bold.woff) format('woff'),
+       url(./Bebas+Neue+Pro+Bold.woff2) format('woff2');
+}

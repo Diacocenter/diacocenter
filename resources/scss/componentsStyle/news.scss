@@ -1,0 +1,36 @@
+.news {
+    .splide__arrow svg {
+        fill: #001F3F;
+        height: 100%;
+        width: 100%;
+    }
+
+    .splide__arrow--prev svg {
+        transform: scale(-0.5, 1.5);
+    }
+
+    button.splide__arrow.splide__arrow--next svg {
+        transform: scale(0.5, 1.5);
+    }
+
+    .splide__arrow:hover:not(:disabled) svg {
+        fill: #000000;
+    }
+
+    .splide__arrow--prev {
+        position: absolute;
+        left: -3rem;
+    }
+
+    .splide__arrow--next {
+        position: absolute;
+        right: -3rem;
+    }
+
+    @media screen and (max-width: 450px) {
+        .splide__arrows {
+            display: none !important;
+        }
+    }
+
+}

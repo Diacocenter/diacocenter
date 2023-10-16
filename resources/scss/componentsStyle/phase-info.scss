@@ -1,0 +1,9 @@
+.step .step-title::before {
+  content: "";
+  display: none; /* Hide the circular indicator */
+}
+
+/* Optional: Adjust other styling as needed */
+.step {
+  padding-left: 0; /* Adjust left padding to align with text */
+}

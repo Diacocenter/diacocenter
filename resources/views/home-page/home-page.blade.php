@@ -1,0 +1,18 @@
+@extends('layout.layout')
+
+@section("content")
+<div >
+    <div class="bg-[url('../../../storage/app/public/home-page/fadeBlue.png')] bg-no-repeat bg-right ">
+        @includeIf("home-page.components.header")
+
+        @includeIf("home-page.components.project-explorer")
+
+        @includeIf("home-page.components.services")
+
+        @includeIf("home-page.components.completed-project")
+
+        @includeIf("home-page.components.start-project")
+    </div>
+</div>
+
+@endsection

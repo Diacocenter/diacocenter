@@ -1,0 +1,125 @@
+.article {
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    background-image: url("/storage/app/public/home-page/articles/line.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position-y: 3rem;
+  }
+
+  //
+  ///* Hide default HTML checkbox */
+  //.switch input {
+  //    opacity: 1;
+  //    width: 0;
+  //    height: 0;
+  //}
+  //
+  ///* The slider */
+  //.slider {
+  //    position: relative;
+  //    cursor: pointer;
+  //    top: -3px;
+  //    left: 0;
+  //    right: 0;
+  //    bottom: 0;
+  //    background-color: white;
+  //    transition: .4s;
+  //    border: 3px solid #505050;
+  //    width: 11em;
+  //    height: 3em;
+  //}
+  //
+  .off picture {
+    position: relative;
+    content: "";
+    transition: 0.4s;
+    opacity: 1;
+    margin: auto;
+    display: block;
+    padding: 1px;
+  }
+
+  //
+  #checkbox:checked ~ .off picture {
+    //transform: translateX(7em);
+    left: 80%;
+  }
+
+  //
+  #checkbox:checked ~ .seekers-title {
+    color: black !important;
+    opacity: 25% !important;
+  }
+
+  //
+  #checkbox:checked ~ .providers-title {
+    color: black !important;
+    opacity: 100%;
+
+  }
+
+
+  //
+  @media screen and (max-width: 1024px) {
+    #checkbox:checked ~ .off picture {
+      //transform: translateX(7em);
+      left: 77%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #checkbox:checked ~ .off picture {
+      //transform: translateX(7em);
+      left: 82%;
+    }
+    .switch {
+      background-image: none !important;
+    }
+
+  }
+  //
+  @media screen and (max-width: 380px) {
+    #checkbox:checked ~ .off picture {
+      //transform: translateX(7em);
+      left: 76%;
+    }
+    .switch {
+      background-image: none !important;
+    }
+
+  }
+  @media screen and (max-width: 320px) {
+    #checkbox:checked ~ .off picture {
+      //transform: translateX(7em);
+      left: 72%;
+    }
+  }
+  @media screen and (min-width: 380px) and (max-width: 450px) {
+    .switch {
+      background-image: none !important;
+    }
+    #checkbox:checked ~ .off picture {
+      //transform: translateX(7em);
+      left: 80%;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+

@@ -1,0 +1,615 @@
+@use "sass:map";
+@use 'sass:math';
+
+$Diaco-colors: (
+        "Twilight-Blue":#F4FCFF,
+        "light-blue":#7FBBFF,
+        "gray":#808080,
+        "dark-gray":#505050,
+        "middle_gray":#878787,
+        "light-gray":#939393,
+        "dark-blue": #001F3F,
+        "light-twilight-blue":#dbfbfd,
+);
+
+//$form-switch-color: ff0000;
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='6' fill='red'/></svg>");
+$form-switch-bg-image-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='6' fill='red'/></svg>");
+
+$grid-columns: 24;
+$theme-colors: (
+        "primary": #0d6efd,
+        "secondary": #6c757d,
+        "success": #198754,
+        "info": #0dcaf0,
+        "warning": #ffc107,
+        "danger": #dc3545,
+        "light": #f8f9fa,
+        "dark": #212529
+);
+$theme-colors: map.merge($theme-colors, $Diaco-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+$utilities-colors: $theme-colors-rgb !default;
+$utilities-bg: map-merge($utilities-colors, $Diaco-colors);
+$utilities-bg-colors: map-loop($utilities-bg, rgba-css-var, "$key", "bg");
+$utilities-border-color: map.merge($theme-colors, $Diaco-colors);
+
+$white: #fff !default;
+$navbar-dark-color: rgba($white, .9);
+$navbar-dark-toggler-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-active-color: map-get($Diaco-colors, "orange");
+$accordion-color: #fff;
+$accordion-icon-color: #fff;
+$accordion-icon-active-color: #fff;
+$accordion-button-active-color: #fff;
+
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px,
+        xxl: 1250px
+);
+
+/* --- Create font size values from 1rem to 16rem - Each step multiply to 0.2rem --- */
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-sizes: (
+        1: $font-size-base * 0.5, //8px
+        2: $font-size-base * 0.625, //10px
+        3: $font-size-base * 0.75, //12px
+        4: $font-size-base * 0.875, //14px
+        5: $font-size-base * 0.9375, //15px
+        6: $font-size-base * 1, //16px
+        7: $font-size-base * 1.0625, //17px
+        8: $font-size-base * 1.125, //18px
+        9: $font-size-base * 1.25, //20px
+        10: $font-size-base * 1.375, //22px
+        11: $font-size-base * 1.5, //24px
+        12: $font-size-base * 1.5625, //25px
+        13: $font-size-base * 1.75, //28px
+        14: $font-size-base * 1.875, //30px
+        15: $font-size-base * 2, //32
+        16: $font-size-base * 2.1875, //35
+        17: $font-size-base * 2.5, //40
+        18: $font-size-base * 2.8125, //45
+        19: $font-size-base * 3.125, //50
+        20: $font-size-base * 3.4375, //55
+        21: $font-size-base * 3.75, //60
+        22: $font-size-base * 4.0625, //65
+        23: $font-size-base * 4.375, //70
+        24: $font-size-base * 4.6875, //75
+        25: $font-size-base * 5, //80
+        26: $font-size-base * 5.3125, //85
+        27: $font-size-base * 5.625, //90
+        28: $font-size-base * 5.9375, //95
+        29: $font-size-base * 6.25, //100
+);
+
+$font-size-literal: 3;
+$coefficient: 1;
+
+$spacer: 1rem;
+$spacers: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer * .75,
+        4: $spacer,
+        5: $spacer * 1.25,
+        6: $spacer * 1.5,
+        7: $spacer * 1.75,
+        8: $spacer * 2,
+        9: $spacer * 2.5,
+        10: $spacer * 3,
+        11: $spacer * 4,
+        12: $spacer * 5,
+        13: $spacer * 6,
+        14: $spacer * 7,
+        15: $spacer * 8,
+        16: $spacer * 9,
+        17: $spacer * 10,
+        18: $spacer * 11,
+        19: $spacer * 12,
+        20: $spacer * 14,
+        21: $spacer * 16,
+        22: $spacer * 18,
+        23: $spacer * 20,
+        24: $spacer * 22,
+        25: $spacer * 25,
+        30: $spacer * 30,
+        40: $spacer * 35,
+        50: $spacer * 40,
+        60: $spacer * 45,
+);
+
+/* ########## Create negative spacers values from positive values ########## */
+$negative-spacers: (
+);
+
+@each $key,
+$value in $spacers {
+  $negative-spacers: map-merge($negative-spacers, ($key: -$value));
+}
+
+/* ############################ Create position values in various method ############################ */
+$position-values: (
+        0:0%,
+        20:20%,
+        29:29%,
+        30:30%,
+        31:31%,
+        38:38%,
+        40:40%,
+        41:41%,
+        43:43%,
+        44:44%,
+        60:60%,
+        80:80%,
+        100:100%,
+);
+
+/* --- Create position values from 0% to 200% - Each step is 5% --- */
+$position-literal: 0;
+
+@while $position-literal < 200 {
+  $position-values: map-merge($position-values, ($position-literal: math.div(percentage($position-literal), 100)));
+  $position-literal: $position-literal + 5;
+}
+
+/* --- Create position values from 1em to 20em - Each step is 0.25em --- */
+$position-literal: 1;
+
+@while $position-literal < 20 {
+  @if ($position-literal % 1==0) {
+    $position-values: map-merge($position-values, ($position-literal+em: $position-literal+em));
+  } @else if ($position-literal % 1==0.5) {
+    $position-values: map-merge($position-values, (d+$position-literal*10+em: $position-literal+em));
+  } @else if ($position-literal % 1==0.25 or $position-literal % 1==0.75) {
+    $position-values: map-merge($position-values, (c+$position-literal*100+em: $position-literal+em));
+  }
+
+  $position-literal: $position-literal + 0.25;
+}
+
+/* --- Add custom values to position values --- */
+$position-values: map-merge($position-values, (auto: auto,
+        fit: fit-content));
+
+/* ########## Create negative position values from positive values ########## */
+$position-negative-values: (
+);
+
+@each $key,
+$value in $position-values {
+  $position-negative-values: map-merge($position-negative-values, ($key: -$value));
+}
+
+/* ########## Create line height values from 1rem to 10rem - Each step is 0.25rem ########## */
+$line-height-values: (
+);
+$line-height-literal: 1;
+
+@while $line-height-literal < 10 {
+  @if (round($line-height-literal)==$line-height-literal and floor($line-height-literal)==$line-height-literal) {
+    $line-height-values: map-merge($line-height-values, ($line-height-literal: $line-height-literal+rem));
+  } @else if ($line-height-literal - floor($line-height-literal)==0.5) {
+    $line-height-values: map-merge($line-height-values, ($line-height-literal*10: $line-height-literal+rem));
+  } @else if ($line-height-literal - floor($line-height-literal)==0.25 or $line-height-literal - floor($line-height-literal)==0.75) {
+    $line-height-values: map-merge($line-height-values, ($line-height-literal*100: $line-height-literal+rem));
+  }
+
+  $line-height-literal: $line-height-literal + 0.25;
+}
+
+/* --- Add custom values to line height values --- */
+$line-height-values: map-merge($line-height-values, (sm: $line-height-sm,
+        base: $line-height-base,
+        lg: $line-height-lg,
+));
+
+/* ########## Create viewport height values from 0vh to 100vh - Each step is 5vh ########## */
+$viewport-height-values: (
+        100: 100vh,
+        90: 90vh,
+        80: 80vh,
+        70: 70vh,
+        60: 60vh,
+        50: 50vh,
+        40: 40vh,
+        30: 30vh,
+        20: 20vh,
+        10: 10vh,
+);
+$viewport-height-literal: 0;
+
+@while $viewport-height-literal < 100 {
+  $viewport-height-values: map-merge($viewport-height-values, ($viewport-height-literal: $viewport-height-literal+vh));
+  $viewport-height-literal: $viewport-height-literal + 5;
+}
+
+/* ########## Create viewport width values from 0vw to 100vw or 0vh to 100vh - Each step is 5vw ########## */
+$viewport-width-values: (
+        100 : 100%,
+        90 : 90%,
+        80 : 80%,
+        70 : 70%,
+        60 : 60%,
+        50 : 50%,
+        40 : 40%,
+        30 : 30%,
+        20 : 20%,
+        10 : 10%,
+        5 : 5%,
+);
+$viewport-width-literal: 0;
+
+@while $viewport-width-literal < 100 {
+  $viewport-width-values: map-merge($viewport-width-values, ($viewport-width-literal: $viewport-width-literal+vw));
+  $viewport-width-literal: $viewport-width-literal + 5;
+}
+
+/* ########## Create border width values from 1px to 20px - Each step is 1px ########## */
+$border-widths: (
+        0: 0px,
+        1: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px
+);
+$border-literal: 1;
+
+@while $border-literal < 20 {
+  $border-widths: map-merge($border-widths, ($border-literal: $border-literal+px));
+  $border-literal: $border-literal + 1;
+}
+
+$border-radius-values: (
+        null: $border-radius,
+        circle: 50%,
+        pill: $border-radius-pill,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: $border-radius * 2,
+        5: $border-radius * 4,
+        6: $border-radius * 6,
+        7: $border-radius * 8,
+        8: $border-radius * 10,
+        9: $border-radius * 12,
+        10: $border-radius * 14,
+        11: $border-radius * 16,
+        12: $border-radius * 18,
+        13: $border-radius * 20,
+        14: $border-radius * 22,
+        15: $border-radius * 24
+);
+
+$box-shadow-values: (
+        half: -0.5rem 0.5rem 0.25rem rgba(0, 0, 0, .075),
+        1: -1rem 1rem 0.25rem rgba(0, 0, 0, .075),
+);
+
+/* ########## Create rotate positive values from 5deg to 360deg - Each step is 5deg ########## */
+$rotate-positive-values: (
+);
+$rotate-literal: 5;
+
+@while $rotate-literal < 360 {
+  $rotate-positive-values: map-merge($rotate-positive-values, (#{$rotate-literal}: rotate(#{$rotate-literal}+deg)));
+  $rotate-literal: $rotate-literal + 5;
+}
+
+/* ########## Create negative rotate values from positive rotate value ########## */
+$rotate-negative-values: (
+);
+
+@each $key,
+$value in $rotate-positive-values {
+  $rotate-negative-values: map-merge($rotate-negative-values, ($key: rotate(-$key+deg)));
+}
+
+/* Dispaly Font Size */
+$display-font-sizes: (
+        1: 5rem * 3,
+        2: 4.5rem * 3,
+        3: 4rem * 3,
+        4: 3.5rem * 3,
+        5: 3rem * 3,
+        6: 2.5rem * 3,
+        7: 2rem * 3,
+        8: 1.5rem * 3,
+        9: 1rem * 3,
+        10: 0.5rem * 3
+);
+
+$display-font-family: null;
+$display-font-style: null;
+$display-font-weight: 300;
+//$display-line-height: $headings-line-height;
+
+
+$utilities: (
+        "font-size": (responsive: true,
+                rfs: false,
+                property: font-size,
+                class: fs,
+                values: $font-sizes),
+        "font-weight": (property: font-weight,
+                class: fw,
+                values: (thin: 200,
+                        light: 300,
+                        regular: normal,
+                        medium: 500,
+                        bold: bold,
+                        extra-bold: 600,
+                        black: 800,
+                        extra-black: 900,
+                )),
+        "background-color": (responsive: true,
+                property: background-color,
+                class: bg,
+                local-vars: ("bg-opacity": 1),
+                values: map-merge($utilities-bg-colors,
+                        ("transparent": transparent))),
+        "bg-opacity": (css-var: true,
+                class: bg-opacity,
+                values: (10: .1,
+                        25: .25,
+                        50: .50,
+                        60: .60,
+                        65: .65,
+                        70: .70,
+                        75: .75,
+                        80: .80,
+                        85: .85,
+                        90: .90,
+                        95: .95,
+                        100: 1)),
+        "opacity": (responsive: true,
+                property: opacity,
+                values: (
+                        0: 0,
+                        25: .25,
+                        50: .50,
+                        60: .60,
+                        65: .65,
+                        70: .70,
+                        75: .75,
+                        80: .80,
+                        85: .85,
+                        90: .90,
+                        95: .95,
+                        100: 1,
+                )
+        ),
+        "color": (property: color,
+                class: text,
+                values: $theme-colors),
+        "border": (responsive: true,
+                property: border-width,
+                class: border,
+                values: $border-widths),
+        "width": (responsive: true,
+                property: width,
+                class: w,
+                values: $position-values),
+        "width-v": (responsive: true,
+                property: width,
+                class: w-v,
+                values: $viewport-width-values),
+        "min-viewport-width": (responsive: true,
+                property: min-width,
+                class: min-vw,
+                values: $viewport-width-values),
+        "max-viewport-width": (responsive: true,
+                property: max-width,
+                class: max-vw,
+                values: $viewport-width-values),
+        "height": (responsive: true,
+                property: height,
+                class: h,
+                values: $position-values),
+        "height-v": (responsive: true,
+                property: height,
+                class: h-v,
+                values: $viewport-width-values),
+        "min-viewport-height": (responsive: true,
+                property: min-height,
+                class: min-vh,
+                values: $viewport-height-values),
+        "max-viewport-height": (responsive: true,
+                property: max-height,
+                class: max-vh,
+                values: $viewport-height-values),
+        "max-width": (responsive: true,
+                property: max-width,
+                class: mw,
+                values: $position-values),
+        "translate-middle": (responsive: true,
+                property: transform,
+                class: translate-middle,
+                values: (null: translate(-50%, -50%),
+                        x: translateX(-50%),
+                        y: translateY(-50%),
+                )),
+        "position": (responsive: true,
+                property: position,
+                values: static relative absolute fixed sticky),
+        "top": (responsive: true,
+                property: top,
+                class: top,
+                values: $position-values),
+        "top-n": (responsive: true,
+                property: top,
+                class: top-n,
+                values: $position-negative-values),
+        "bottom": (responsive: true,
+                property: bottom,
+                class: bottom,
+                values: $position-values),
+        "bottom-n": (responsive: true,
+                property: bottom,
+                class: bottom-n,
+                values: $position-negative-values),
+        "start": (responsive: true,
+                property: left,
+                class: start,
+                values: $position-values),
+        "start-n": (responsive: true,
+                property: left,
+                class: start-n,
+                values: $position-negative-values),
+        "end": (responsive: true,
+                property: right,
+                class: end,
+                values: $position-values),
+        "end-n": (responsive: true,
+                property: right,
+                class: end-n,
+                values: $position-negative-values),
+        "background-position-x": (responsive: true,
+                property: background-position-x,
+                class: bp-x,
+                values: $position-values),
+        "background-position-y": (responsive: true,
+                property: background-position-y,
+                class: bp-y,
+                values: $position-values),
+        "line-height": (responsive: true,
+                property: line-height,
+                class: lh,
+                values: $line-height-values),
+        "margin": (responsive: true,
+                property: margin,
+                class: m,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-x": (responsive: true,
+                property: margin-right margin-left,
+                class: mx,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-y": (responsive: true,
+                property: margin-top margin-bottom,
+                class: my,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-top": (responsive: true,
+                property: margin-top,
+                class: mt,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-end": (responsive: true,
+                property: margin-right,
+                class: me,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-bottom": (responsive: true,
+                property: margin-bottom,
+                class: mb,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+        "margin-start": (responsive: true,
+                property: margin-left,
+                class: ms,
+                values: map-merge($spacers, (auto: auto, unset: unset))),
+  // Negative margin utilities
+        "negative-margin": (responsive: true,
+                property: margin,
+                class: m-n,
+                values: $negative-spacers),
+        "negative-margin-x": (responsive: true,
+                property: margin-right margin-left,
+                class: mx-n,
+                values: $negative-spacers),
+        "negative-margin-y": (responsive: true,
+                property: margin-top margin-bottom,
+                class: my-n,
+                values: $negative-spacers),
+        "negative-margin-top": (responsive: true,
+                property: margin-top,
+                class: mt-n,
+                values: $negative-spacers),
+        "negative-margin-end": (responsive: true,
+                property: margin-right,
+                class: me-n,
+                values: $negative-spacers),
+        "negative-margin-bottom": (responsive: true,
+                property: margin-bottom,
+                class: mb-n,
+                values: $negative-spacers),
+        "negative-margin-start": (responsive: true,
+                property: margin-left,
+                class: ms-n,
+                values: $negative-spacers),
+  // Padding utilities
+        "padding": (responsive: true,
+                property: padding,
+                class: p,
+                values: $spacers),
+        "padding-x": (responsive: true,
+                property: padding-right padding-left,
+                class: px,
+                values: $spacers),
+        "padding-y": (responsive: true,
+                property: padding-top padding-bottom,
+                class: py,
+                values: $spacers),
+        "padding-top": (responsive: true,
+                property: padding-top,
+                class: pt,
+                values: $spacers),
+        "padding-end": (responsive: true,
+                property: padding-right,
+                class: pe,
+                values: $spacers),
+        "padding-bottom": (responsive: true,
+                property: padding-bottom,
+                class: pb,
+                values: $spacers),
+        "padding-start": (responsive: true,
+                property: padding-left,
+                class: ps,
+                values: $spacers),
+  // Rounded (Border Radius)
+        "rounded": (responsive: true,
+                property: border-radius,
+                class: rounded,
+                values: $border-radius-values),
+        "rounded-ts": (responsive: true,
+                property: border-top-right-radius,
+                class: rounded-ts,
+                values: $border-radius-values),
+        "rounded-te": (responsive: true,
+                property: border-top-left-radius,
+                class: rounded-te,
+                values: $border-radius-values),
+        "rounded-bs": (responsive: true,
+                property: border-bottom-right-radius,
+                class: rounded-bs,
+                values: $border-radius-values),
+        "rounded-be": (responsive: true,
+                property: border-bottom-left-radius,
+                class: rounded-be,
+                values: $border-radius-values),
+        "shadow": (responsive: true,
+                property: box-shadow,
+                class: shadow,
+                values: $box-shadow-values),
+        "rotate": (responsive: true,
+                property: transform,
+                class: rotate,
+                values: $rotate-positive-values),
+        "rotate-n": (responsive: true,
+                property: transform,
+                class: rotate-n,
+                values: $rotate-negative-values),
+  // Border
+        "border-color": (
+                property: border-color,
+                class: border,
+                values: $utilities-border-color),
+        "container":(
+                property: container,
+                class: container,
+                values: $container-max-widths),
+)
