@@ -32,7 +32,6 @@
         "animate.css": "^4.1.1",
         "animejs": "^3.2.1",
         "autoprefixer": "^10.4.15",
-        "bootstrap-select": "^1.13.18",
         "filepond-plugin-image-exif-orientation": "^1.0.11",
         "filepond-plugin-image-preview": "^4.6.11",
         "formik": "^2.4.2",

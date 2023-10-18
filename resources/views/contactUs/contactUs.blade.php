@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-<div class="container mx-auto py-10 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-5">
+<div class="container py-10 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-5">
     <div class="md:col-span-1">
         @includeIf('contactUs.components.forms')
     </div>

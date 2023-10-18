@@ -58,7 +58,7 @@ class User extends Authenticatable implements LaratrustUser, MustVerifyEmail
         'password',
         'location',
         'about_me',
-        'skill',
+        'label',
         "verification_code",
         "is_cooperational",
         "sex"
@@ -80,6 +80,7 @@ class User extends Authenticatable implements LaratrustUser, MustVerifyEmail
      * @var array<string, string>
      */
     protected $casts = [
+        'label'   => 'array',
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
         'sex'   =>  GenderStatusEnum::class

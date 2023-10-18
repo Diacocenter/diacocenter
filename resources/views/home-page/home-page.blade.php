@@ -1,8 +1,8 @@
 @extends('layout.layout')
 
 @section("content")
-<div >
-    <div class="bg-[url('../../../storage/app/public/home-page/fadeBlue.png')] bg-no-repeat bg-right ">
+<div>
+    <div style="background-image:url( {{asset("/storage/home-page/fadeBlue.png")}})" class="bg-[{{ asset("/storage/home-page/fadeBlue.png") }}] bg-no-repeat bg-right ">
         @includeIf("home-page.components.header")
 
         @includeIf("home-page.components.project-explorer")

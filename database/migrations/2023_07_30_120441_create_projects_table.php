@@ -24,7 +24,8 @@ return new class extends Migration
             $table->string('start_date');
             $table->string('end_date');
             $table->mediumText("description");
-            $table->string('skills');
+            $table->double("price");
+            $table->string('label');
             $table->timestamps();
         });
     }

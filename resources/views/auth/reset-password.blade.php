@@ -3,30 +3,30 @@
 @section('content')
     <div class="container mx-auto bg-white">
         <div class="flex flex-row my-20 justify-between">
-    <div class="relative flex flex-col justify-center bg-white shadow container text-center text-black tracking-wider p-8 form-items p-10 h-full w-full lg:w-1/2">
-        <h1 class="text-h2 mb-5">Set new password</h1>
-        <p class="my-5 text-body2">Enter your new password.</p>
+    <div class="relative flex flex-col justify-center bg-white shadow container text-center text-black tracking-wider p-8 form-items p-10 h-auto w-full lg:w-1/2">
+        <h1 class="text-h2 mb-5 text-darkSteelGray">Set new password</h1>
+        <p class="my-5 text-body2 text-lightSteelBlue">Enter your new password.</p>
         @foreach ($errors->all() as $error)
             <div class="text-red-600">{{ $error }}</div>
         @endforeach
         <form action="{{ route('password.update') }}" method="POST">
             @csrf
-            <input type="hidden" name="email" value="{{ $request->email }}">
-            <input type="hidden" name="token" value="{{ $request->token }}">
+{{--            <input type="hidden" name="email" value="{{ $request->email }}">--}}
+{{--            <input type="hidden" name="token" value="{{ $request->token }}">--}}
             <div class="mb-3">
-                <input class="form-input  border border-gray-700 rounded-none w-full py-2 px-3" type="password" name="password" aria-label="Password" placeholder="Password">
+                <input class="form-input  border border-gray-700 rounded-lg w-full py-2 px-3" type="password" name="password" aria-label="Password" placeholder="Password">
                 @error('password')
                 <div class="text-red-600 mt-1">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
-                <input class="form-input border border-gray-700 rounded-none w-full py-2 px-3" type="password" name="password_confirmation" aria-label="Password Confirmation" placeholder="Password Confirmation">
+                <input class="form-input border border-gray-700 rounded-lg w-full py-2 px-3" type="password" name="password_confirmation" aria-label="Password Confirmation" placeholder="Password Confirmation">
                 @error('password_confirmation')
                 <div class="text-red-600 mt-1">{{ $message }}</div>
                 @enderror
             </div>
             <a href="{{ route('password.confirmation') }}">
-                <button type="submit" class="btn btn-primary text-black hover:text-white text-caption w-full mt-5 py-2 rounded-none">Reset Password</button>
+                <button type="submit" class="btn btn-primary text-darkSteelGray text-xl hover:text-white text-caption w-full mt-5 py-2 rounded-lg">Reset Password</button>
             </a>
         </form>
     </div>

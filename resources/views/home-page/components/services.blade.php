@@ -1,4 +1,4 @@
-<section class="mx-5 mt-20">
+<section class="container mt-20">
     <div class="text-h3 mt-5">
         <p class="text-center text-4xl">A better way to solve problems</p>
     </div>

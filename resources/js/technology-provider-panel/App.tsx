@@ -4,7 +4,6 @@ import customTheme from '../custom-theme.js';
 import {createTheme, ThemeProvider, StyledEngineProvider} from '@mui/material/styles';
 import {BrowserRouter} from "react-router-dom";
 import MainDrawer from "./components/MainDrawer";
-import {StylesProvider} from "@mui/styles";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";

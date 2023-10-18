@@ -1,17 +1,13 @@
-<div class="shadow p-5 position-relative mt-5">
-    <picture>
-        <source class="w-100"
-                srcset="{{asset("/storage/articles/thumbnail/") . "/" . $relatedArticle->thumbnailImage()->first()->url . ".png"}}">
-        <img class="w-100"
-             src="{{asset("/storage/articles/thumbnail/") . "/" .  $relatedArticle->thumbnailImage()->first()->url . ".webp"}}">
-    </picture>
+<div class="shadow p-5 position-relative mt-5 rounded-lg">
+        <img class="w-100 rounded-lg"
+             src="{{asset("/storage/articles/thumbnail/") . "/" .  $relatedArticle->thumbnailImage()->first()->url }}">
     <p class="text-h5 my-5 letter-space-2px fw-bold ">{{ $relatedArticle->title }}</p>
     <p class="text-caption text-start lh-sm">{{$relatedArticle->short_description}}</p>
     <div class="flex justify-between text-light-gray text-subtitle fw-medium mt-5">
         <p>{{ $relatedArticle->user->first_name }} {{ $relatedArticle->user->last_name }}</p>
         <p>{{ $relatedArticle->created_at }}</p>
     </div>
-    <a class="btn btn-blue bg-primary text-black block mx-auto px-10 py-4 rounded-none mt-5" href="{{ route("blog.show", ["article" => $relatedArticle->slug]) }}">
+    <a class="btn btn-blue bg-primary text-black block mx-auto px-10 py-3 rounded-lg mt-5 min-h-0 h-10" href="{{ route("blog.show", ["article" => $relatedArticle->slug]) }}">
         Read More
     </a>
 </div>

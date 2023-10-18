@@ -134,17 +134,13 @@
 {{--            </div>--}}
 {{--        </div>--}}
 
-<div class="container mt-10">
-    <picture>
-        <source class="w-100"
-                srcset="{{asset("/storage/news/header") . "/" . $news->headerImage()->first()->url}}">
-        <img class="w-100"
+<div class="container my-10">
+        <img class="w-100 rounded-lg"
              src="{{asset("/storage/news/header") . "/" .  $news->headerImage()->first()->url }}">
-    </picture>
-    <div class="mt-10 ">
-        <h1 class="fs-17"> {{$news->title}}
+    <div class="my-10 ">
+        <h1 class="text-h3 md:text-h2"> {{$news->title}}
         </h1>
-        <p >
+        <p class="text-body1" >
             {!! $news->body !!}
         </p>
     </div>

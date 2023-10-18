@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="container mx-auto mt-10 font-piazzolla">
+    <div class="container mt-10 font-piazzolla">
         <div>
             <div>
                 <p class="text-center text-h1 my-10">
@@ -9,7 +9,7 @@
                 </p>
             </div>
             <div>
-                <section class="splide new-splide px-0 p-0 m-5" aria-label="Basic Structure Example" id="new_splide">
+                <section class="splide new-splide px-0 p-0" aria-label="Basic Structure Example" id="new_splide">
                     <div class="splide__track">
                         <ul class="splide__list pt-5 pb-10">
                             @forelse($news as $new)
@@ -17,13 +17,13 @@
                                     <div class="relative">
                                         <div class="">
                                             <picture class="flex h-full">
-                                                <source class="w-full h-auto"
+                                                <source class="w-full h-auto rounded-lg"
                                                         srcset="{{ asset('storage/news/header/' . $new->headerImage()->first()->url) }}">
-                                                <img class="w-full h-auto"
+                                                <img class="w-full h-auto rounded-lg"
                                                      src="{{ asset('storage/news/header/' . $new->headerImage()->first()->url) }}">
                                             </picture>
                                         </div>
-                                        <div class="lg:p-10 w-full lg:w-[40%] lg:absolute bottom-[5%] left-[2%] backdrop-blur bg-white/40">
+                                        <div class="lg:p-10 w-full lg:w-[40%] lg:absolute bottom-[5%] left-[2%] backdrop-blur bg-white/40 rounded-lg">
                                             <div>
                                                 <a class="text-h5 md:text-h4 mb-2 text-black underline stretched-link no-underline"
                                                    href="{{ route('news.show', $new->slug) }}">{{ $new->title }}</a>
@@ -66,17 +66,17 @@
                         <div class="splide__track p-5">
                             <ul class="splide__list pt-5 pb-10 px-1">
                                 @forelse($articles as $article)
-                                    <li class="splide__slide shadow flex flex-col relative">
+                                    <li class="splide__slide shadow flex flex-col relative rounded-lg">
                                         <div>
                                             <picture>
-                                                <source class="w-full"
+                                                <source class="w-full rounded-lg"
                                                         srcset="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url}}">
-                                                <img class="w-full"
+                                                <img class="w-full rounded-lg"
                                                      src="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url}}">
                                             </picture>
                                         </div>
                                         <div class="p-5 h-full flex flex-col justify-between">
-                                            <a class="my-3 text-h5 text-black no-underline link stretched-link leading-none"
+                                            <a class="my-2 text-body1 text-black no-underline link stretched-link leading-8 font-bold"
                                                href="{{ route('blog.show', $article->slug) }}">{{ $article->title }}</a>
                                             <p class="text-caption">{{ $article->short_description }}</p>
                                             <div class="flex justify-between">

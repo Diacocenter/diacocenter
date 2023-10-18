@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\ProjectStatusEnum;
 use App\Models\Article;
 use App\Models\News;
 use App\Models\Project;
@@ -12,7 +13,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view("home-page.home-page")->with("articles", Article::all())->with("news", News::all());
+        $completedProject = Project::where("language_id", "=", 1)->where("status", "=", ProjectStatusEnum::completed)->get();
+
+        return view("home-page.home-page")->with("articles", Article::all())->with("news", News::all())->with("complete_project", $completedProject)->with("projects", Project::all());
     }
 
     public function ourStory()
@@ -72,3 +75,5 @@ class HomeController extends Controller
 //    }
 
 }
+
+

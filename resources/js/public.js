@@ -6,10 +6,6 @@ import "./login-animation.js";
 import "./login.js";
 
 
-
-
-
-
 if (document.getElementById('blog-splide')) {
     const blog = new Splide('#blog-splide', {
         type: 'loop',
@@ -40,33 +36,52 @@ if (document.getElementById('new_splide')) {
     blogNews.mount();
 }
 
-
-let articleBox =  document.getElementById('checkbox')
-let providerItem = document.getElementById("provider")
-let seekerItem = document.getElementById("seeker")
-articleBox.addEventListener('click',log)
-
-function log(){
-    if (articleBox.checked){
-        seekerItem.classList.remove("fade-out")
-        providerItem.classList.add("fade-out");
-
-        providerItem.addEventListener('transitionend', function(e) {
-            providerItem.classList.add("hidden");
-        });
-
-        seekerItem.classList.remove("hidden");
-    }else {
-        providerItem.classList.remove("fade-out")
-        seekerItem.classList.add("fade-out");
-
-        seekerItem.addEventListener('transitionend', function(e) {
-            seekerItem.classList.add("hidden");
-        });
-
-        providerItem.classList.remove("hidden");
-    }
+if (document.getElementById('project')) {
+    const project = new Splide('#project', {
+        arrows: false,
+        pagination: false,
+        autoScroll: {
+            speed: 0.5,
+        },
+        type: 'loop',
+        perPage: 4,
+        gap:'1rem',
+        padding:'10px',
+        breakpoints: {
+            576: {perPage: 1},
+            992: {perPage: 2},
+        },
+    });
+    project.mount({AutoScroll});
 }
+
+
+// let articleBox =  document.getElementById('checkbox')
+// let providerItem = document.getElementById("provider")
+// let seekerItem = document.getElementById("seeker")
+// articleBox.addEventListener('click',log)
+
+// function log(){
+//     if (articleBox.checked){
+//         seekerItem.classList.remove("fade-out")
+//         providerItem.classList.add("fade-out");
+//
+//         providerItem.addEventListener('transitionend', function(e) {
+//             providerItem.classList.add("hidden");
+//         });
+//
+//         seekerItem.classList.remove("hidden");
+//     }else {
+//         providerItem.classList.remove("fade-out")
+//         seekerItem.classList.add("fade-out");
+//
+//         seekerItem.addEventListener('transitionend', function(e) {
+//             seekerItem.classList.add("hidden");
+//         });
+//
+//         providerItem.classList.remove("hidden");
+//     }
+// }
 
 
 

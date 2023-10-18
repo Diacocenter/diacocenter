@@ -1,8 +1,8 @@
-<section class="mx-7 my-20">
+<section class="container my-20">
     <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 mt-4 gap-x-4 gap-y-4">
         <div class="card w-120 glass bg-extraLightBlue">
-            <figure><img src="{{ asset('/storage/home-page/images/fifth.png') }}" class="w-full" /></figure>
-            <div class="card-body">
+            <figure><img class="min-h-[10rem] w-full object-cover" src="{{ asset('/storage/home-page/images/fifth.png') }}" class="w-full" /></figure>
+            <div class="card-body p-3">
                 <h2 class="card-title text-darkSteelGray xl:justify-center md:justify-center justify-start mb-3">Automated warehouses</h2>
                 <div class="flex justify-between xl:flex-row md:flex-row flex-col">
                     <p class="text-lightSteelBlue">Technology Seeker</p>
@@ -18,8 +18,8 @@
             <p class="card-title rounded-b-xl bg-darkSteelBlue text-lighSteelGray p-3 flex justify-center">15 Days Ago</p>
         </div>
         <div class="card w-120 glass bg-extraLightBlue">
-            <figure><img src="{{ asset('/storage/home-page/images/sixth.png') }}" class="w-full" /></figure>
-            <div class="card-body">
+            <figure><img class="min-h-[10rem] w-full object-cover" src="{{ asset('/storage/home-page/images/sixth.png') }}" class="w-full" /></figure>
+            <div class="card-body p-3">
                 <h2 class="card-title text-darkSteelGray xl:justify-center md:justify-center justify-start mb-3">Digital oil field</h2>
                 <div class="flex justify-between xl:flex-row md:flex-row flex-col">
                     <p class="text-lightSteelBlue">Technology Seeker</p>

@@ -2,40 +2,33 @@
 
 @section('content')
     <div class="container mx-auto bg-white">
-            <div class="flex flex-row p-0 justify-between">
-                <div
-                    class="relative flex flex-col justify-center bg-white shadow container text-center text-black tracking-widest p-10 form-items h-full w-full lg:w-1/2">
-                      <h1 class="text-h2 mb-5">Verify your Email</h1>
-                      <p class="my-5 font-medium text-body2">{{auth()->user()->email}}</p>
-                      <p class="font-medium text-body2">We already have sent you an Email, which contains a verification
-                          code. Check
-                          your inbox to verify your Email address.</p>
-                    <form id="form" method="POST">
-                        @csrf
-                    <div>
-                          <button id="start" class="btn bg-primary w-50 p-2 rounded-none text-caption mt-5">Send Code</button>
-
-                          <span id="cd-seconds" class="btn bg-white w-50 p-2 ms-0 rounded-none text-caption mt-5">00 Seconds</span>
-                      </div>
-                    </form>
-                    <form action="{{ route("submit_code") }}" method="POST">
-                        @csrf
-                      <input name="confirm" type="text"
-                             class="border border-black border-2 rounded-none p-2 w-full text-h6 mt-5"
-                             placeholder="Enter confirmation code">
-                      <p class="text-body2 mt-5">
-                          Or wait for 30 seconds...
-                      </p>
-                      <button type="submit" class="btn bg-primary w-full p-2 rounded-none text-caption mt-5">Confirm
-                      </button>
-                    </form>
-                </div>
-                <div class="relative flex flex-col hidden lg:block">
-                    <img src="{{ asset('storage/website/img.svg') }}">
-                </div>
+        <div class="flex flex-row p-0 justify-between">
+            <div class="relative flex flex-col justify-center bg-white shadow container text-center text-black tracking-widest p-10 form-items h-auto w-full lg:w-1/2">
+                <h1 class="text-h2 mb-5 text-darkSteelGray">Verify your Email</h1>
+{{--                <p class="my-5 font-medium text-body2">{{auth()->user()->email}}</p>--}}
+                <p class="font-medium text-body2 text-lightSteelBlue">If your email address is correct, please click here to request a verification code. After receiving the code, please enter it in the box below</p>
+                <form id="form" method="POST">
+                    @csrf
+                    <div class="flex justify-center mt-10">
+                        <button id="start" class="btn bg-primary w-1/2 p-2 rounded-l-xl rounded-r-none text-caption mt-5 text-darkSteelGray">Send Code</button>
+                        <span id="cd-seconds" class="btn bg-white w-1/2 p-2 rounded-r-xl rounded-l-none border-2 border-primary text-darkSteelGray text-caption mt-5">30 Seconds</span>
+                    </div>
+                </form>
+                <form action="{{ route("submit_code") }}" method="POST">
+                    @csrf
+                    <input name="confirm" type="text"
+                           class="border border-darkSteelGray border-2 rounded-xl p-2 w-full text-h6 mt-5"
+                           placeholder="Enter confirmation code">
+                    <button type="submit" class="btn bg-primary w-full p-2 rounded-xl text-caption mt-5 text-darkSteelGray">Confirm
+                    </button>
+                </form>
             </div>
-
+            <div class="relative flex flex-col hidden lg:block">
+                <img src="{{ asset('storage/website/img.svg') }}">
+            </div>
         </div>
+
+    </div>
     </div>
 
 

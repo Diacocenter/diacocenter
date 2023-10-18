@@ -30,53 +30,53 @@
         <form class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 gap-y-3" action="{{ route('contact-us.store') }}" method="POST">
             @csrf
             <div class="col-span-2 md:col-span-1 mx-3">
-                <label class="label">
-                    <p class="label-text text-h5 ">First Name</p>
-                </label>
+{{--                <label class="label">--}}
+{{--                    <p class="label-text text-h5 ">First Name</p>--}}
+{{--                </label>--}}
                 <input type="text" name="first_name" id="firstName" value="{{old("first_name")}}"
-                    class="@error("first_name") border-red-500 @enderror input input-bordered border rounded-none  w-full " placeholder="First Name">
+                    class="@error("first_name") border-red-500 @enderror input input-bordered border rounded-lg  w-full " placeholder="First Name">
                 @error('first_name')
                 <div class="text-red-600 text-xs flex justify-content-end italic mt-1 ml-1">Enter at least 3 characters</div>
                 @enderror
             </div>
             <div class="col-span-2 md:col-span-1 mx-3">
-                <label class="label">
-                    <p class="label-text text-h5 ">Last Name</p>
-                </label>
+{{--                <label class="label">--}}
+{{--                    <p class="label-text text-h5 ">Last Name</p>--}}
+{{--                </label>--}}
                 <input type="text" name="last_name" id="lastName" value="{{old("last_name")}}"
-                    class="@error("last_name") border-red-500 @enderror input input-bordered border rounded-none w-full  " placeholder="Last Name">
+                    class="@error("last_name") border-red-500 @enderror input input-bordered border rounded-lg w-full  " placeholder="Last Name">
                 @error('last_name')
                 <div class="text-red-600 text-xs flex justify-content-end italic mt-1 ml-1">Enter at least 3 characters</div>
                 @enderror
             </div>
             <div class="col-span-2  mx-3">
-                <label class="label">
-                    <p class="label-text text-h5 ">Email</p>
-                </label>
+{{--                <label class="label">--}}
+{{--                    <p class="label-text text-h5 ">Email</p>--}}
+{{--                </label>--}}
                 <input type="email" name="email" id="email" value="{{old("email")}}"
-                    class="@error("email") border-red-500 @enderror input input-bordered border rounded-none w-full  " placeholder="Email">
+                    class="@error("email") border-red-500 @enderror input input-bordered border rounded-lg w-full  " placeholder="Email">
                 @error('email')
                 <div class="text-red-600 text-xs flex justify-content-end italic mt-1 ml-1">Invalid Email (Use format @example.com)</div>
                 @enderror
             </div>
             <div class="col-span-2  mx-3">
-                <label class="label">
-                    <p class="label-text text-h5 ">Phone Number</p>
-                </label>
+{{--                <label class="label">--}}
+{{--                    <p class="label-text text-h5 ">Phone Number</p>--}}
+{{--                </label>--}}
                 <input type="text" name="phone_number" id="phone_number" value="{{old("phone_number")}}"
-                    class="@error("phone_number") border-red-500 @enderror input input-bordered border rounded-none w-full  " placeholder="Phone Number">
+                    class="@error("phone_number") border-red-500 @enderror input input-bordered border rounded-lg w-full  " placeholder="Phone Number">
                 @error('phone_number')
                 <div class="text-red-600 text-xs flex justify-content-end italic mt-1 ml-1">Enter Only Number</div>
                 @enderror
             </div>
             <div class="col-span-2  mx-3">
-                <label class="label">
-                    <p class="label-text text-h5 ">Message</p>
-                </label>
-                <textarea name="message" id="message" class="textarea textarea-bordered w-full rounded-none" placeholder="Bio">{{{ old('message') }}}</textarea>
+{{--                <label class="label">--}}
+{{--                    <p class="label-text text-h5 ">Message</p>--}}
+{{--                </label>--}}
+                <textarea name="message" id="message" class="textarea textarea-bordered w-full rounded-lg" placeholder="Bio">{{{ old('message') }}}</textarea>
             </div>
             <div class="col-span-2  text-center my-3">
-                <button class="btn btn-primary text-white text-h4 text-center px-10 capitalize rounded-none">Send Message</button>
+                <button class="btn btn-primary text-white text-h5 text-center px-10 capitalize rounded-lg">Send Message</button>
             </div>
         </form>
 

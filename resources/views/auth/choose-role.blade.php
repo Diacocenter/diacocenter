@@ -2,60 +2,58 @@
 
 @section('content')
     <div class="container mx-auto bg-white">
-        <div class="">
-            <div class="flex flex-row mt-20 gap-10">
-                <div
-                    class="relative flex flex-col bg-white shadow text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
-                    <h1 class="text-h2 mb-5">Choose Role</h1>
-                    <p class="text-body2">Your Registration Process Has Just Completed Successfully.</p>
-                    <form class="text-black mt-5" action="{{ route('roles') }}" method="POST">
-                        @csrf
-                        <div class="flex flex-wrap md:flex-nowrap md:gap-12">
-                            <div class="basis-full md:basis-1/2 mt-5">
-                                <div class="form-check rounded-xl shadow p-0 h-full">
-                                    <input type="radio" class="btn-check hidden peer" name="role" id="technology-provider"
-                                           autocomplete="off"
-                                           value="provider">
-                                    <label
-                                        class="flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent btn btn-outline border-lightGray rounded-xl h-full pb-2 text-gray-400 checked:text-black checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
-                                        for="technology-provider">
-                                        <p class="text-h6">Provider</p>
-                                        <p class="text-subtitle text-start tracking-wide">I’m a technology provider who
-                                            can create
-                                            innovative and efficient technology solutions for the projects.</p>
-                                    </label>
+        <div class="flex flex-row mt-20 shadow overflow-hidden rounded-lg">
+            <div
+                class="relative flex flex-grow-1 w-64 flex-col bg-white text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
+                <h1 class="text-h2 mb-5 text-darkSteelGray">Choose Role</h1>
+                <p class="text-body2 text-lightSteelBlue">Your Registration Process Has Just Completed Successfully.</p>
+                <form class="text-black mt-5" action="{{ route('roles') }}" method="POST">
+                    @csrf
+                    <div class="flex flex-wrap md:flex-nowrap md:gap-12">
+                        <div class="basis-full md:basis-1/2 mt-5">
+                            <div class="form-check shadow p-0 h-full border-2 border-extraLightGray rounded-xl p-2">
+                                <input type="radio" class="btn-check hidden peer" name="role" id="technology-provider"
+                                    autocomplete="off"
+                                    value="provider">
+                                <label
+                                    class="text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent border-0 btn btn-outline h-full pb-2 checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
+                                    for="technology-provider">
+                                    <p class="text-h6">Provider</p>
+                                    <p class="text-subtitle text-start tracking-wide">I’m a technology provider who
+                                        can create
+                                        innovative and efficient technology solutions for the projects.</p>
+                                </label>
 
-                                </div>
-                            </div>
-                            <div class="basis-full md:basis-1/2 mt-5">
-                                <div class="form-check rounded-xl shadow p-0 h-full">
-                                    <input type="radio" class="btn-check hidden peer" name="role" id="technology-seeker"
-                                           autocomplete="off"
-                                           value="seeker">
-                                    <label
-                                        class="flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent btn btn-outline border-lightGray rounded-xl h-full pb-2 text-gray-400 checked:text-black checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
-                                        for="technology-seeker">
-                                        <p class="text-h6">Seeker</p>
-                                        <p class="text-subtitle text-start tracking-wide">I’m a technology seeker who
-                                            researches to
-                                            upgrade
-                                            and improve the efficiency of my projects.</p>
-                                    </label>
-                                </div>
                             </div>
                         </div>
-                        <div>
-                            <button type="submit"
-                                    class="btn btn-primary text-black hover:text-white text-caption w-full py-3 mt-20 rounded-xl">
-                                Next
-                            </button>
+                        <div class="basis-full md:basis-1/2 mt-5">
+                            <div class="form-check shadow p-0 h-full border-2 border-extraLightGray rounded-xl p-2">
+                                <input type="radio" class="btn-check hidden peer" name="role" id="technology-seeker"
+                                    autocomplete="off"
+                                    value="seeker">
+                                <label
+                                    class="text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent border-0 peer-checked:border-accent btn btn-outline h-full pb-2 checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
+                                    for="technology-seeker">
+                                    <p class="text-h6">Seeker</p>
+                                    <p class="text-subtitle text-start tracking-wide">I’m a technology seeker who
+                                        researches to
+                                        upgrade
+                                        and improve the efficiency of my projects.</p>
+                                </label>
+                            </div>
                         </div>
+                    </div>
+                    <div>
+                        <button type="submit"
+                                class="btn btn-primary text-black hover:text-white text-caption w-full py-3 mt-20 rounded-none rounded-xl">
+                            Select
+                        </button>
+                    </div>
 
-                    </form>
-                </div>
-                <div class="relative flex flex-col hidden lg:block">
-                    <img src="{{ asset('storage/website/img.svg') }}">
-                </div>
+                </form>
+            </div>
+            <div class="relative flex flex-1 w-32 flex-col hidden lg:block">
+                <img class="max-w-full max-h-full w-full" src="{{ asset('storage/login/login-background.png') }}">
             </div>
         </div>
     </div>

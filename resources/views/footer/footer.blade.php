@@ -115,65 +115,54 @@
 {{--</div>--}}
 
 
-
-<footer>
-    <div class="bg-[#CEEAFF] w-full lg:px-20 px-16 pt-14 ">
-        <div class=" grid md:grid-cols-4 sm:grid-cols-1 sm:gap-15 gap-y-10">
-            <div class="grid md:grid-cols-4 grid-cols-2 md:col-span-3 gap-y-10 lg:justify-items-center text-center lg:text-start">
+<footer class="mt-10">
+    <div class="bg-accent px-5 pt-14 ">
+        <div class="container">
+            <div class="grid grid-col-1 xl:justify-items-start xl:grid-cols-6 justify-items-center gap-y-10 xl:gap-y-0">
                 <div>
-                    <h6 class="text-lg font-semibold">Solutions</h6>
-                    <ul class="mt-4 flex flex-col space-y-1 font-medium">
-                        <li>Advanced materials </li>
-                        <li>electronics</li>
-                        <li>polymer</li>
-                        <li>IT</li>
+                    <h6 class="text-lg font-semibold">Home Pages</h6>
+                    <ul class="mt-4 flex flex-col space-y-2 font-medium text-center xl:text-start">
+                        <li><a href="{{ route("blog-news") }}">News & Blogs</a></li>
+                        <li><a href="{{ route("services") }}">Services</a></li>
+                        <li><a href="{{ route("our-story") }}">Our Story</a></li>
+                        <li><a href="{{ route("contact-us.index") }}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h6 class="text-lg font-semibold">Support</h6>
-                    <ul class="mt-4 flex flex-col space-y-1 font-medium">
-                        <li>Pricing</li>
-                        <li>Documentation</li>
-                        <li>Guides</li>
-
+                    <h6 class="text-center xl:text-start text-lg font-semibold">Legal</h6>
+                    <ul class="text-center xl:text-start mt-4 flex flex-col space-y-1 font-medium">
+                        <li>Privacy & Terms</li>
                     </ul>
                 </div>
-                <div>
-                    <h6 class="text-lg font-semibold">Company</h6>
-                    <ul class="mt-4 flex flex-col space-y-1 font-medium">
-                        <li>About</li>
-                        <li>Partners</li>
-                    </ul>
+                <div class="text-center xl:text-start md:col-span-3">
+                    <h6 class="text-lg font-semibold">
+                        Subscribe to our newsletter
+                    </h6>
+                    <p class="mt-3 font-medium">
+                        The latest news, articles, and resources, sent to your inbox weekly
+                    </p>
+                    <div class="flex space-x-1 w-full flex-wrap xl:flex-nowrap space-y-3 xl:space-y-0 mt-5 justify-center xl:justify-start">
+                        <input type="email" placeholder="Enter your email"
+                               class="input w-80 py-2 px-2 bg-[#CEEAFF] border-2 border-black rounded-md placeholder-black">
+                        <button class="btn text-black px-6 py-1 rounded-md text-sm"
+                                style="background: var(--Liner, linear-gradient(90deg, #7ABBFF 0%, #3E6EA0 100%))">
+                            Subscribe
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <h6 class="text-lg font-semibold">Legal</h6>
-                    <ul class="mt-4 flex flex-col space-y-1 font-medium">
-                        <li>Privacy</li>
-                        <li>Terms</li>
-                    </ul>
+                <div class="xl:justify-self-end self-center order-first sm:order-none">
+                    <image src="{{ asset('/storage/website/footer/logo.svg') }}" alt="logo"></image>
+                    <image class="mt-3" src="{{ asset('/storage/website/footer/diaco-text.svg') }}"
+                           alt="logo-text"></image>
                 </div>
             </div>
-            <div class="text-center lg:text-start">
-                <h1 class="text-lg font-semibold">
-                    Subscribe to our newsletter
-                </h1>
-                <p class="mt-3 font-medium">
-                    The latest news, articles, and resources, sent to your inbox weekly
-                </p>
-                <div class="flex space-x-1 w-full flex-wrap xl:flex-nowrap space-y-3 xl:space-y-0 mt-5 justify-center">
-                    <input type="email" placeholder="Enter your email" class=" py-2 px-2 bg-[#CEEAFF] border-2 border-black rounded-md placeholder-black">
-                    <button class="text-black px-6 py-1 rounded-md bg-[#99C9FF] text-sm">Subscribe</button>
+            <div class="border-t-2 border-black w-full lg:mt-15 mt-10 py-8 flex sm:justify-between flex-wrap-reverse justify-center">
+                <p class="text-xs mt-8 lg:mt-0">© 2020 Dlex, Inc. All rights reserved</p>
+                <div class="flex space-x-10 justify-center ">
+                    <image src="{{ asset('/storage/website/footer/insta.svg') }}" alt="git"></image>
+                    <image src="{{ asset('/storage/website/footer/facebook.svg') }}" alt="git"></image>
+                    <image src="{{ asset('/storage/website/footer/twitter.svg') }}" alt="git"></image>
                 </div>
-            </div>
-        </div>
-        <div class="border-t-2 border-black w-full lg:mt-20 mt-10 py-8 flex lg:justify-between flex-wrap-reverse justify-center">
-            <p class="text-xs mt-8 lg:mt-0">© 2020 Dlex, Inc. All rights reserved</p>
-            <div class="flex space-x-10 ">
-                <image src="{{ '/storage/home-page/git.svg' }}" alt="git"></image>
-                <image src="{{ '/storage/home-page/insta.svg' }}" alt="git"></image>
-                <image src="{{ '/storage/home-page/facebook.svg' }}" alt="git"></image>
-                <image src="{{ '/storage/home-page/twitter.svg' }}" alt="git"></image>
             </div>
         </div>
-    </div>
 </footer>

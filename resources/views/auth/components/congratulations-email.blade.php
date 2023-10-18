@@ -1,16 +1,14 @@
+
 @extends("auth.template-auth")
 
 @section('content-object')
-    <div class="position-relative d-flex flex-column justify-content-center bg-white shadow container text-center text-black letter-space-2px p-8 form-items p-10 h-100">
-        <h1 class="fs-19 mb-5 text-center">Congratulations </h1>
-        <p class="my-5">marshian03@gmail.com</p>
-        <p class="Montserrat">Your Email has just been verified.
+    <div class="relative flex flex-col justify-center bg-white shadow container text-center text-black tracking-wider p-8 form-items p-10 h-full">
+        <h1 class="text-6xl mb-5 text-center text-darkSteelGray">Congratulations </h1>
+        <p class="my-5 text-SantaGrey">marshian03@gmail.com</p>
+        <p class="text-body2 text-lightSteelBlue">Your Email has just been verified.
             <br>
             Now, you can enjoy.</p>
-        <button class="btn btn-primary text-white w-100 rounded-0 mt-5 fs-10">Go To Dashboard </button>
-        <p>
-            Or wait for 5 seconds...
-        </p>
+        <button class="btn btn-primary w-full rounded-lg mt-5 text-DarkSlateGrey">Go To Dashboard </button>
     </div>
 @endsection
 
@@ -18,6 +16,6 @@
 @section('image')
     <picture>
         <source srcset="{{asset("storage/login/congratulations-verify.png")}}">
-        <img class="w-100" src="{{asset("storage/login/congratulations-verify.webp")}}">
+        <img class="w-100 rounded-r-lg" src="{{asset("storage/login/congratulations-verify.webp")}}">
     </picture>
 @endsection

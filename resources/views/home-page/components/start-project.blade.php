@@ -1,4 +1,4 @@
-<section class="mx-7 my-24">
+<section class="container my-24">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div>
             <div class="text-h4">

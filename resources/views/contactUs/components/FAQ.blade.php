@@ -1,26 +1,26 @@
-<div class="container mx-auto my-20">
+<div class="container mx-auto">
     <div class="lg:mx-30">
         <div class="text-center">
             <p class="text-h4 md:text-h3 my-16">
                 How Can We Help You?
             </p>
         </div>
-        <div>
-            <div class="form-control">
-                <div class="input-group">
-                    <input type="text" placeholder="Search Help Articles" class="input input-bordered w-full"
-                           style="border-radius: 0px" />
-                    <button class="btn btn-primary text-white hover:text-black  btn-square" style="border-radius: 0px">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </button>
-                </div>
+        <div class="form-control my-">
+            <div class="input-group justify-center">
+                <input type="text" placeholder="Search Problem"
+                       class="input input-bordered w-4/6 input-success shadow border-0"/>
+                <button class="btn btn-square btn-success"
+                        style="background: linear-gradient(90deg, #7ABBFF 0%, #3E6EA0 142.14%);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="26" viewBox="0 0 27 26" fill="none">
+                        <path d="M12 21C17.2467 21 21.5 16.7467 21.5 11.5C21.5 6.25329 17.2467 2 12 2C6.75329 2 2.5 6.25329 2.5 11.5C2.5 16.7467 6.75329 21 12 21Z"
+                              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26 25L21 20" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
-        <div class="grid grid-cols-3 gap-5 mt-5">
+        <div class="grid grid-cols-3 gap-5 my-10">
             <div class="col-span-3 md:col-span-1 text-center flex flex-col">
                 <p class="text-h4 mb-3">General</p>
                 <a class="text-primary text-h6" href="{{ route("faq") }}">How to Create Account?</a>

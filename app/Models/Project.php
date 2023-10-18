@@ -50,8 +50,9 @@ class Project extends Model
         'start_date',
         'end_date',
         'description',
-        'skills',
+        'label',
         'company_name',
+        'price',
         'status'
     ];
 
@@ -68,8 +69,21 @@ class Project extends Model
      */
     protected $casts = [
         'status' => ProjectStatusEnum::class,
-        'skills' => "array"
+        'label' => "array"
     ];
+
+
+    public function getLabelAttribute($value)
+    {
+        return ucfirst($value, true);
+    }
+
+    // Define a setter for the 'label' attribute
+    public function setLabelAttribute($value)
+    {
+        $lowercaseArray = array_map('strtolower', $value);
+        $this->attributes['label'] = json_encode($lowercaseArray);
+    }
 
     /**
      * Get the images for this tour.

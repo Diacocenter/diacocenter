@@ -29,10 +29,8 @@
 
 @include('loading.loading')
 
-<div>
     @includeIf("navbar.navbar")
     @yield("content")
-</div>
 @includeIf("footer.footer")
 
 @vite(["resources/scss/public.scss", "resources/js/public.js"])

@@ -3,7 +3,7 @@
         <div class="col-span-2 lg:col-span-1">
             <div class="grid grid-rows-2 gap-y-5">
                 <div class="row-span-1">
-                    <div class="card  bg-base-100 shadow-md rounded-none md:mr-20">
+                    <div class="card  bg-base-100 shadow-md rounded-lg md:mr-20">
                         <div class="card-body">
                             <h2 class="card-title text-h3 font-thin text-primary">Isfahan</h2>
                             <p class="text-body2 font-medium">
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="row-span-1">
-                    <div class="card  bg-base-100 shadow-md rounded-none md:mr-20">
+                    <div class="card  bg-base-100 shadow-md rounded-lg md:mr-20">
                         <div class="card-body">
                             <h2 class="card-title text-h3 font-thin text-primary">Tehran</h2>
                             <p class="text-body2 font-medium">

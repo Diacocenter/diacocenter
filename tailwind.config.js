@@ -26,7 +26,9 @@ export default {
                 darkSteelBlue: '#C2DFFF',
                 darkSteelGray: '#4D6580',
                 lighSteelGray: '#66798C',
-                extraLightBlue: '#EBF4FF'
+                extraLightBlue: '#EBF4FF',
+                DarkSlateGrey:"#263240",
+                SantaGrey:"#99A5B2",
             },
         },
         accentColor: ({ theme }) => ({
@@ -223,12 +225,25 @@ export default {
             "7xl": "80rem",
         },
         container: {
+            // you can configure the container to be centered
+            center: true,
+
+            // or have default horizontal padding
             padding: {
                 DEFAULT: '1rem',
                 sm: '2rem',
-                // lg: '3rem',
-                // xl: '4rem',
-                // '2xl': '5rem',
+                lg: '4rem',
+                xl: '5rem',
+                '2xl': '6rem',
+            },
+
+            // default breakpoints but with 40px removed
+            screens: {
+                sm: '540px',
+                md: '720px',
+                lg: '960px',
+                xl: '1140px',
+                '2xl': '1320px',
             },
         },
         content: {
@@ -1071,6 +1086,19 @@ export default {
                     success: "#CEEAFF",
                     warning: "#fbbd23",
                     error: "#f87272",
+                    lightSteelBlue: "#7397BF",
+                    darkSteelBlue: '#C2DFFF',
+                    darkSteelGray: '#4D6580',
+                    lightSteelGray: '#66798C',
+                    extraLightBlue: '#EBF4FF',
+                    extraLightGray: "#DFDFDF",
+                    trolleyGrey: "#818181",
+                    elementalGrey:  "#a0a0a0",
+                    snowFlake: "#f0f0f0",
+                    vesperViolet: "#99A5B2",
+                    superSilver: "#eee",
+                    blueBlack: "#263240",
+
                 },
             },
         ],

@@ -14,7 +14,7 @@
 
 
 <div class="h-full relative font-piazzolla">
-    <iframe class="w-full h-full" width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+    <iframe class="w-full h-full rounded-lg" width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
             title="Light Gray Canvas"
             src="//www.arcgis.com/apps/Embed/index.html?webmap=8b3d38c0819547faa83f7b7aca80bd76&extent=-180,-64.2471,180,79.9656&home=true&zoom=true&previewImage=false&scale=true&disable_scroll=false&theme=light&marker=35.80947176784634,51.42890234766167&marker-symbol=pin&marker-color=red">
     </iframe>

@@ -1,6 +1,5 @@
-<header class="text-white">
-    <div
-        class="rounded-2xl min-h-screen mx-4 bg-cover bg-[url('../../../storage/app/public/home-page/hero-new.webp')]">
+<header class="container text-white">
+    <div style="background-image:url( {{asset("/storage/home-page/hero-new.webp")}})" class="rounded-2xl min-h-screen bg-cover bg-right">
         <div class=""></div>
         <div class=" text-left">
             <div class="py-16 px-10">

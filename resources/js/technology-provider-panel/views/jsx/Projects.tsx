@@ -198,18 +198,18 @@ export default function Projects() {
                                             {row.title}
                                         </StyledTableCell>
                                     </a>
-                                    <StyledTableCell
-                                        sx={{
-                                            border: 1,
-                                            borderColor: "#e9f6ff",
-                                            borderWidth: 3,
-                                        }}
-                                        align="center"
-                                    >
-                                        {row.category.map((item,index)=>
-                                        item
-                                        )}
-                                    </StyledTableCell>
+                                    {/*<StyledTableCell*/}
+                                    {/*    sx={{*/}
+                                    {/*        border: 1,*/}
+                                    {/*        borderColor: "#e9f6ff",*/}
+                                    {/*        borderWidth: 3,*/}
+                                    {/*    }}*/}
+                                    {/*    align="center"*/}
+                                    {/*>*/}
+                                    {/*    {row.category.map((item,index)=>*/}
+                                    {/*    item*/}
+                                    {/*    )}*/}
+                                    {/*</StyledTableCell>*/}
                                     <StyledTableCell
                                         sx={{
                                             border: 1,
