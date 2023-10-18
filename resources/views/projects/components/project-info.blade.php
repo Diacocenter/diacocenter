@@ -20,7 +20,26 @@
                 <p class="text-h3 my-7">Gallery</p>
             </div>
             <div>
-                <div class="carousel carousel-center">
+
+                <div class="container_p"> 
+            
+                    <!-- All images with side view -->
+                    <div class="side_view"> 
+                        @forelse($project->gallery as $image)
+                            @if($loop->first)
+                                <!-- Main view of our gallery -->
+                                <div class="main_view mx-auto"> 
+                                    <img class="main_view_first" style="width: 100%; height: 100%;" src="{{ asset('/storage/projects/' . $image->url) }}" id="main" alt="IMAGE">
+                                </div> 
+                            @endif
+                            <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/' . $image->url) }}" alt="discover" onclick="change(this.src)">
+                        @empty
+                            <h1 class="text-red-500">There is no image</h1>
+                        @endforelse
+                    </div> 
+                </div> 
+
+                <!-- <div class="carousel carousel-center">
                     @foreach($project->gallery as $image)
                     <div class="carousel-item mx-2">
                         <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/' . $image->url) }}"
@@ -52,7 +71,7 @@
 {{--                        <img class="w-full h-full" src="{{ asset('/storage/gallery/4.png') }}"--}}
 {{--                            alt="discover">--}}
 {{--                    </div>--}}
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="mt-10">
@@ -156,3 +175,10 @@
         </div>
     </div>
 </div>
+
+<script>
+    
+const change = src => { 
+    document.getElementById('main').src = src 
+}
+</script>
