@@ -74,9 +74,13 @@
 {{--                    <p class="label-text text-h5 ">Message</p>--}}
 {{--                </label>--}}
                 <textarea name="message" id="message" class="textarea textarea-bordered w-full rounded-lg" placeholder="Bio">{{{ old('message') }}}</textarea>
+                @error("message")
+                <div class="text-red-600 text-xs flex justify-content-end italic mt-1 ml-1">Enter at least 20 characters</div>
+                @enderror
             </div>
+            <input type="text" class="hidden" name="name">
             <div class="col-span-2  text-center my-3">
-                <button class="btn btn-primary text-white text-h5 text-center px-10 capitalize rounded-lg">Send Message</button>
+                <button type="submit" class="btn btn-primary text-white text-h5 text-center px-10 capitalize rounded-lg">Send Message</button>
             </div>
         </form>
 

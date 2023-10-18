@@ -42,10 +42,10 @@
 <div id="project" class="container splide">
     <div class="splide__track pb-3">
         <ul class="splide__list">
-            @foreach($projects as $project)
+            @forelse($projects as $project)
                 <li class="splide__slide rounded-lg overflow-hidden shadow">
                     <a href="{{ route("project.show", $project->slug) }}" class="">
-                    <figure><img class="aspect-square	" src="{{ asset('/storage/projects/'. $project->gallery->first()->url) }}" /></figure>
+                    <figure><img class="aspect-square	" src="{{ asset('/storage/projects/thumbnails/'. $project->headerImage->url) }}" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lightBlack">{{ $project->title }}</h2>
                         <p class="xl:whitespace-normal lg:whitespace-normal md:whitespace-normal"
@@ -66,7 +66,9 @@
                     </div>
                     </a>
                 </li>
-            @endforeach
+            @empty
+                <div><p class="text-red-600">No Data</p></div>
+            @endforelse
         </ul>
 
     </div>

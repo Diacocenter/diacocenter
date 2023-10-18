@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\ContactUs;
 use App\Http\Requests\StoreContactUsRequest;
 use App\Http\Requests\UpdateContactUsRequest;
-use http\Client\Request;
 
 class ContactUsController extends Controller
 {
@@ -33,7 +32,6 @@ class ContactUsController extends Controller
         $contactUsObj = new ContactUs($request->validated());
         $contactUsObj->save();
         return redirect()->back()->with(["successful" => "Thank You For Contacting With Us"]);
-
     }
 
     /**

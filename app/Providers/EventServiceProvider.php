@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Events\ChangePasswordEvent;
 use App\Events\ContactUsEvent;
 use App\Events\MemberShipEvent;
+use App\Events\NewsLetterEvent;
 use App\Events\RegistrationEvent;
 use App\Events\ResetPasswordEvent;
 use App\Events\VerificationEvent;
@@ -12,6 +13,7 @@ use App\Listeners\ChangePasswordListener;
 use App\Listeners\ContactUsEmailListener;
 use App\Listeners\ContactUsSMSListener;
 use App\Listeners\MemberShipListener;
+use App\Listeners\NewsLetterListener;
 use App\Listeners\RegistrationListener;
 use App\Listeners\ResetPasswordListener;
 use App\Listeners\VerifyListener;
@@ -64,6 +66,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         ChangePasswordEvent::class=>[
             ChangePasswordListener::class
+        ],
+        NewsLetterEvent::class =>[
+            NewsLetterListener::class
         ]
     ];
 

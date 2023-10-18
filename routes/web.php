@@ -9,6 +9,7 @@ use App\Http\Controllers\VerificationController;
 use App\Http\Controllers\Web\UserController;
 use App\Http\Controllers\Web\v1\ArticleController;
 use App\Http\Controllers\Web\v1\NewControllers;
+use App\Http\Controllers\Web\v1\NewsLetterController;
 use App\Http\Controllers\Web\v1\ProjectController;
 use App\Http\Controllers\Web\v1\ProjectPhaseController;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,8 @@ Route::get("/faq", [HomeController::class, "faq"])->name("faq");
 
 //discover
 Route::get("/discover", [HomeController::class, "discover"])->name("discover");
+
+Route::resource('newsletter', NewsletterController::class)->only('store');
 
 //projects
 Route::apiResource("project", ProjectController::class)->only("show");

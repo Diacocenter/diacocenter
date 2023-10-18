@@ -11,7 +11,7 @@ class StoreNewsLetterRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreNewsLetterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "newsletter_email" => ['required', 'unique:newsletters', 'max:255', 'email'],
+            "name"             => ['prohibited'],
         ];
     }
 }

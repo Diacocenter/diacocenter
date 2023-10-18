@@ -68,8 +68,11 @@ class Project extends Model
      * @return array
      */
     protected $casts = [
-        'status' => ProjectStatusEnum::class,
-        'label' => "array"
+        'status'     => ProjectStatusEnum::class,
+        'label'      => "array",
+        'start_date' => "datetime",
+        'end_date'   => "datetime",
+
     ];
 
 
@@ -98,7 +101,7 @@ class Project extends Model
      */
     public function headerImage(): Image|MorphOne|null
     {
-        return $this->morphOne(Image::class, 'parentable')->where('image_type','=','header',);
+        return $this->morphOne(Image::class, 'parentable')->where('image_type', '=', 'header',);
     }
 
 //    /**

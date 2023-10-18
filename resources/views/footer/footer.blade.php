@@ -138,17 +138,26 @@
                     <h6 class="text-lg font-semibold">
                         Subscribe to our newsletter
                     </h6>
-                    <p class="mt-3 font-medium">
-                        The latest news, articles, and resources, sent to your inbox weekly
-                    </p>
-                    <div class="flex space-x-1 w-full flex-wrap xl:flex-nowrap space-y-3 xl:space-y-0 mt-5 justify-center xl:justify-start">
-                        <input type="email" placeholder="Enter your email"
+                    @if(Session::get('successful'))
+                        <div class="text-green-600 text-xl">{{Session::get('successful')}}</div>
+                    @else
+                        <p class="mt-3 font-medium"> The latest news, articles, and resources, sent to your inbox weekly</p>
+                    @endif
+                    <form action="{{ route("newsletter.store") }}" method="POST" class="flex space-x-1 w-full flex-wrap xl:flex-nowrap space-y-3 xl:space-y-0 mt-5 justify-center xl:justify-start">
+                        @csrf
+                        <input type="email" placeholder="Enter your email" name="newsletter_email" value="{{ old("newsletter_email") }}"
                                class="input w-80 py-2 px-2 bg-[#CEEAFF] border-2 border-black rounded-md placeholder-black">
-                        <button class="btn text-black px-6 py-1 rounded-md text-sm"
+                        <input type="text" name="name" class="hidden" />
+                        <button type="submit" class="btn text-black px-6 py-1 rounded-md text-sm"
                                 style="background: var(--Liner, linear-gradient(90deg, #7ABBFF 0%, #3E6EA0 100%))">
                             Subscribe
                         </button>
-                    </div>
+                    </form>
+                    @error("newsletter_email")
+                    <p class="text-red-600 block">
+                        {{$message}}
+                    </p>
+                    @enderror
                 </div>
                 <div class="xl:justify-self-end self-center order-first sm:order-none">
                     <image src="{{ asset('/storage/website/footer/logo.svg') }}" alt="logo"></image>
@@ -156,7 +165,7 @@
                            alt="logo-text"></image>
                 </div>
             </div>
-            <div class="border-t-2 border-black w-full lg:mt-15 mt-10 py-8 flex sm:justify-between flex-wrap-reverse justify-center">
+            <div class="border-t-2 border-black w-full lg:mt-15 mt-10 py-8 flex flex-col md:flex-row items-center gap-5 sm:justify-between flex-wrap-reverse justify-center">
                 <p class="text-xs mt-8 lg:mt-0">© 2020 Dlex, Inc. All rights reserved</p>
                 <div class="flex space-x-10 justify-center ">
                     <image src="{{ asset('/storage/website/footer/insta.svg') }}" alt="git"></image>

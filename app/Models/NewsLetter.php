@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Events\NewsLetterEvent;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,7 +16,7 @@ class NewsLetter extends Model
      *
      * @var string
      */
-    protected $table = 'news_letters';
+    protected $table = 'newsletters';
 
     /**
      * The primary key associated with the table.
@@ -46,5 +47,14 @@ class NewsLetter extends Model
      * @var array
      */
     protected $guarded = ['id'];
-
+    /**
+     * @return void
+     */
+    protected static function boot():void
+    {
+        parent::boot();
+        static::created(function ($model) {
+            NewsLetterEvent::dispatch($model);
+        });
+    }
 }

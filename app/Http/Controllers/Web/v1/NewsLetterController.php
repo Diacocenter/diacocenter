@@ -30,7 +30,13 @@ class NewsLetterController extends Controller
      */
     public function store(StoreNewsLetterRequest $request)
     {
-        //
+//        dd($request->validated());
+        if ($request->validated()){
+            Newsletter::create($request->validated());
+            return redirect()->back()->with('result', 'You\'re email has submitted successfully.');
+        }
+        return redirect()->back()->withErrors('newsletter_email', 'You\'re email registration fails.');
+
     }
 
     /**

@@ -54,6 +54,23 @@ if (document.getElementById('project')) {
     });
     project.mount({AutoScroll});
 }
+if (document.getElementById('complete_project')) {
+    const complete_project = new Splide('#complete_project', {
+        arrows: false,
+        pagination: false,
+        autoScroll: {
+            speed: 1,
+        },
+        type: 'loop',
+        perPage: 3,
+        gap:'20px',
+        breakpoints: {
+            576: {perPage: 1},
+            992: {perPage: 2},
+        },
+    });
+    complete_project.mount();
+}
 
 
 // let articleBox =  document.getElementById('checkbox')

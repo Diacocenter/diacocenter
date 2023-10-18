@@ -24,9 +24,10 @@ class StoreContactUsRequest extends FormRequest
         return [
             "first_name"   => ["required", "min:3", "max:50"],
             "last_name"    => ["required", "min:3", "max:50"],
-            "email"        => ["required", "min:10", "max:50" , "email"],
-            "phone_number" => ["min:10", "max:15" ],
+            "email"        => ["required", "min:10", "max:50", "email"],
+            "phone_number" => ["min:10", "max:15"],
             "message"      => ["required", "min:20", "max:150"],
+            "name"         => ['prohibited'],
         ];
     }
 }

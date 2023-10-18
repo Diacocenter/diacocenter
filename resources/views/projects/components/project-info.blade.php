@@ -21,28 +21,28 @@
             </div>
             <div>
 
-                <div class="container_p"> 
-            
+                <div class="container_p">
+
                     <!-- All images with side view -->
-                    <div class="side_view"> 
+                    <div class="side_view">
                         @forelse($project->gallery as $image)
                             @if($loop->first)
                                 <!-- Main view of our gallery -->
-                                <div class="main_view mx-auto"> 
-                                    <img class="main_view_first" style="width: 100%; height: 100%;" src="{{ asset('/storage/projects/' . $image->url) }}" id="main" alt="IMAGE">
-                                </div> 
+                                <div class="main_view mx-auto">
+                                    <img class="main_view_first aspect-square md:aspect-auto" style="width: 100%; height: 100%;" src="{{ asset('/storage/projects/gallery/' . $image->url) }}" id="main" alt="IMAGE">
+                                </div>
                             @endif
-                            <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/' . $image->url) }}" alt="discover" onclick="change(this.src)">
+                            <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/gallery/' . $image->url) }}" alt="discover" onclick="change(this.src)">
                         @empty
                             <h1 class="text-red-500">There is no image</h1>
                         @endforelse
-                    </div> 
-                </div> 
+                    </div>
+                </div>
 
                 <!-- <div class="carousel carousel-center">
                     @foreach($project->gallery as $image)
                     <div class="carousel-item mx-2">
-                        <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/' . $image->url) }}"
+                        <img class="max-h-48 aspect-auto" src="{{ asset('/storage/projects/gallery/' . $image->url) }}"
                             alt="discover">
                     </div>
 {{--                        <div class="carousel-item mx-2">--}}
@@ -177,8 +177,8 @@
 </div>
 
 <script>
-    
-const change = src => { 
-    document.getElementById('main').src = src 
+
+const change = src => {
+    document.getElementById('main').src = src
 }
 </script>

@@ -2,7 +2,7 @@
 
 @section("content")
 <div>
-    <div style="background-image:url( {{asset("/storage/home-page/fadeBlue.png")}})" class="bg-[{{ asset("/storage/home-page/fadeBlue.png") }}] bg-no-repeat bg-right ">
+    <div style="background-image:url( {{asset("/storage/home-page/fadeBlue.png")}})" class="bg-no-repeat bg-right ">
         @includeIf("home-page.components.header")
 
         @includeIf("home-page.components.project-explorer")

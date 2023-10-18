@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->integer('status')->default(ProjectStatusEnum::applied);
             $table->foreignIdFor(Language::class);
-            $table->string('start_date');
-            $table->string('end_date');
+            $table->date('start_date');
+            $table->date('end_date');
             $table->mediumText("description");
             $table->double("price");
             $table->string('label');

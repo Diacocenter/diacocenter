@@ -53,7 +53,7 @@
                     @enderror
                 </div>
                 <div class="mt-5">
-                    <input name="password" type="password" value="{{old("password")}}"
+                    <input name="password" type="password"
                            class="@error("password") border-red-500 @enderror border-2 border-darkSteelGray rounded-xl p-2 w-full  text-h6"
                            placeholder="Password">
                     @error("password")
@@ -76,8 +76,7 @@
                 <div class="mt-5">
                     <input name="password_confirmation" type="password"
                            class="border-2 border-darkSteelGray rounded-xl p-2 w-full  text-h6"
-                           placeholder="Confirm Password"
-                           value="{{ old('password') }}">
+                           placeholder="Confirm Password">
                 </div>
                 <div class="">
                     <button type="submit"

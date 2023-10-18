@@ -27,7 +27,7 @@ class ProjectSeeder extends Seeder
             // English
             [
                 'header_pic'           => [
-                    'url'        => 'discover.png',
+                    'url'        => 'ardakan-glass-factory-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -75,22 +75,22 @@ class ProjectSeeder extends Seeder
 //                ],
                 'gallery'              => [
                     [
-                        "url"        => "ardakan-glass-factory-01.jpg",
+                        "url"        => "ardakan-glass-factory-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "ardakan-glass-factory-02.jpg",
+                        "url"        => "ardakan-glass-factory-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "ardakan-glass-factory-03.jpg",
+                        "url"        => "ardakan-glass-factory-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "ardakan-glass-factory-04.jpg",
+                        "url"        => "ardakan-glass-factory-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -116,7 +116,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'   => [
-                    'url'        => 'discover4.png',
+                    'url'        => 'concrete-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -156,7 +156,7 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "concrete-01.jpg",
+                        "url"        => "concrete-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -184,7 +184,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover9.png',
+                    'url'        => 'seperation-shells-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -218,32 +218,32 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "seperation-shells-01.jpg",
+                        "url"        => "seperation-shells-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "seperation-shells-02.jpg",
+                        "url"        => "seperation-shells-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "seperation-shells-03.jpg",
+                        "url"        => "seperation-shells-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "seperation-shells-04.jpg",
+                        "url"        => "seperation-shells-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "seperation-shells-05.jpg",
+                        "url"        => "seperation-shells-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "seperation-shells-06.jpg",
+                        "url"        => "seperation-shells-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -251,7 +251,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover10.png',
+                    'url'        => 'improvementoflocalplantspecies-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -282,42 +282,42 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "improvementoflocalplantspecies-01.jpg",
+                        "url"        => "improvementoflocalplantspecies-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-02.jpg",
+                        "url"        => "improvementoflocalplantspecies-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-03.jpg",
+                        "url"        => "improvementoflocalplantspecies-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-04.jpg",
+                        "url"        => "improvementoflocalplantspecies-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-05.jpg",
+                        "url"        => "improvementoflocalplantspecies-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-06.jpg",
+                        "url"        => "improvementoflocalplantspecies-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-07.jpg",
+                        "url"        => "improvementoflocalplantspecies-07.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "improvementoflocalplantspecies-08.jpg",
+                        "url"        => "improvementoflocalplantspecies-08.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -325,7 +325,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover8.png',
+                    'url'        => 'smart-pedestria-crossing-lights-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -359,27 +359,27 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "smart-pedestria-crossing-lights-01.jpg",
+                        "url"        => "smart-pedestria-crossing-lights-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "smart-pedestria-crossing-lights-02.jpg",
+                        "url"        => "smart-pedestria-crossing-lights-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "smart-pedestria-crossing-lights-03.jpg",
+                        "url"        => "smart-pedestria-crossing-lights-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "smart-pedestria-crossing-lights-04.jpg",
+                        "url"        => "smart-pedestria-crossing-lights-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "smart-pedestria-crossing-lights-05.jpg",
+                        "url"        => "smart-pedestria-crossing-lights-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -387,7 +387,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'urban-perimeter-highways-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -415,32 +415,32 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "urban-perimeter-highways-01.jpg",
+                        "url"        => "urban-perimeter-highways-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "urban-perimeter-highways-02.jpg",
+                        "url"        => "urban-perimeter-highways-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "urban-perimeter-highways-03.jpg",
+                        "url"        => "urban-perimeter-highways-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "urban-perimeter-highways-04.jpg",
+                        "url"        => "urban-perimeter-highways-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "urban-perimeter-highways-05.jpg",
+                        "url"        => "urban-perimeter-highways-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "urban-perimeter-highways-06.jpg",
+                        "url"        => "urban-perimeter-highways-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -448,7 +448,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'removalof-heavy-metals-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -476,32 +476,32 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "removalof-heavy-metals-01.jpg",
+                        "url"        => "removalof-heavy-metals-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "removalof-heavy-metals-02.jpg",
+                        "url"        => "removalof-heavy-metals-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "removalof-heavy-metals-03.jpg",
+                        "url"        => "removalof-heavy-metals-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "removalof-heavy-metals-04.jpg",
+                        "url"        => "removalof-heavy-metals-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "removalof-heavy-metals-05.jpg",
+                        "url"        => "removalof-heavy-metals-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "removalof-heavy-metals-06.jpg",
+                        "url"        => "removalof-heavy-metals-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -509,7 +509,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'figma01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -585,7 +585,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'personal-car-navigation-software-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -613,37 +613,37 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "personal-car-navigation-software-01.jpg",
+                        "url"        => "personal-car-navigation-software-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-02.jpg",
+                        "url"        => "personal-car-navigation-software-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-03.jpg",
+                        "url"        => "personal-car-navigation-software-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-04.jpg",
+                        "url"        => "personal-car-navigation-software-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-05.jpg",
+                        "url"        => "personal-car-navigation-software-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-06.jpg",
+                        "url"        => "personal-car-navigation-software-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "personal-car-navigation-software-07.jpg",
+                        "url"        => "personal-car-navigation-software-07.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -651,7 +651,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'it-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -661,7 +661,7 @@ class ProjectSeeder extends Seeder
                 'start_date'       => '2023/10/15',
                 'end_date'                 => '2024/6/18',
                 'label'             => ['Advance Material', 'Chemistry', 'Environment',],
-                'status'               => 1,
+                'status'               => 2,
                 'description'        => 'These tiles should be capable of significantly reducing the penetration of electromagnetic waves when installed on the walls of specific locations, including technical and telecommunications laboratories.',
                 'includes'             => [
                     [
@@ -679,27 +679,27 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "it-01.jpg",
+                        "url"        => "it-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "it-02.jpg",
+                        "url"        => "it-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "it-03.jpg",
+                        "url"        => "it-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "it-04.jpg",
+                        "url"        => "it-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "it-05.jpg",
+                        "url"        => "it-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -707,7 +707,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'kashi-pardis-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -735,27 +735,27 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "kashi-pardis-01.jpg",
+                        "url"        => "kashi-pardis-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "kashi-pardis-02.jpg",
+                        "url"        => "kashi-pardis-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "kashi-pardis-03.jpg",
+                        "url"        => "kashi-pardis-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "kashi-pardis-04.jpg",
+                        "url"        => "kashi-pardis-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "kashi-pardis-05.jpg",
+                        "url"        => "kashi-pardis-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -763,7 +763,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'palayeshgah-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -773,7 +773,7 @@ class ProjectSeeder extends Seeder
                 'start_date'       => '2023/10/15',
                 'end_date'                 => '2024/6/18',
                 'label'             => ['Environment', 'Polymer', 'Oil', 'Chemistry'],
-                'status'               => 1,
+                'status'               => 2,
                 'description'        => 'In the oil and gas purification process at the countrys refineries, a substantial amount of excess sulfate is generated, which is currently stored environmentally, leading to environmental pollution. Therefore, ideas are being considered for its conversion into a useful industrial substance or for its proper disposal.',
                 'includes'             => [
                     [
@@ -791,32 +791,32 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "palayeshgah-01.jpg",
+                        "url"        => "palayeshgah-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "palayeshgah-02.jpg",
+                        "url"        => "palayeshgah-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "palayeshgah-03.jpg",
+                        "url"        => "palayeshgah-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "palayeshgah-04.jpg",
+                        "url"        => "palayeshgah-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "palayeshgah-05.jpg",
+                        "url"        => "palayeshgah-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "palayeshgah-06.jpg",
+                        "url"        => "palayeshgah-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -824,7 +824,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'polymer-iran-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -852,32 +852,32 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "polymer-iran-01.jpg",
+                        "url"        => "polymer-iran-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "polymer-iran-02.jpg",
+                        "url"        => "polymer-iran-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "polymer-iran-03.jpg",
+                        "url"        => "polymer-iran-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "polymer-iran-04.jpg",
+                        "url"        => "polymer-iran-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "polymer-iran-05.jpg",
+                        "url"        => "polymer-iran-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "polymer-iran-06.jpg",
+                        "url"        => "polymer-iran-06.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -885,7 +885,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'mohaseban-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -895,7 +895,7 @@ class ProjectSeeder extends Seeder
                 'start_date'       => '2023/10/15',
                 'end_date'                 => '2024/6/18',
                 'label'             => ['AI', 'IT'],
-                'status'               => 1,
+                'status'               => 2,
                 'description'        => 'This system can calculate the immediate impact of each transaction made with credit and debit cards on an individuals projected annual tax. It also suggests the best investment opportunities within a given time frame based on spending patterns.',
                 'includes'             => [
                     [
@@ -913,27 +913,27 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "mohaseban-01.jpg",
+                        "url"        => "mohaseban-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "mohaseban-02.jpg",
+                        "url"        => "mohaseban-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "mohaseban-03.jpg",
+                        "url"        => "mohaseban-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "mohaseban-04.jpg",
+                        "url"        => "mohaseban-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "mohaseban-05.jpg",
+                        "url"        => "mohaseban-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
@@ -941,7 +941,7 @@ class ProjectSeeder extends Seeder
             ],
             [
                 'header_pic'           => [
-                    'url'        => 'discover5.png',
+                    'url'        => 'plant-01.png',
                     'image_type' => 'header',
                     'alt'        => 'discover'
                 ],
@@ -969,27 +969,27 @@ class ProjectSeeder extends Seeder
                 ],
                 'gallery'              => [
                     [
-                        "url"        => "plant-01.jpg",
+                        "url"        => "plant-01.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "plant-02.jpg",
+                        "url"        => "plant-02.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "plant-03.jpg",
+                        "url"        => "plant-03.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "plant-04.jpg",
+                        "url"        => "plant-04.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "plant-05.jpg",
+                        "url"        => "plant-05.png",
                         "alt"        => "",
                         "image_type" => ""
                     ],
