@@ -70,9 +70,9 @@
                                         <div>
                                             <picture>
                                                 <source class="w-full rounded-lg"
-                                                        srcset="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url}}">
+                                                        srcset="{{ asset('/storage/blog') . '/' . $article->thumbnailImage()->first()->url}}">
                                                 <img class="w-full rounded-lg"
-                                                     src="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url}}">
+                                                     src="{{ asset('/storage/blog') . '/' . $article->thumbnailImage()->first()->url}}">
                                             </picture>
                                         </div>
                                         <div class="p-5 h-full flex flex-col justify-between">
