@@ -7,7 +7,7 @@
         <h1 class="text-center mb-5 text-h3 md:text-h2 text-darkSteelGray">Welcome To Diaco</h1>
         <a href="{{route('third-party.auth.redirect')}}"
            class="btn bg-white flex items-center border-2 border-darkSteelGray text-lightSteelBlue rounded-xl h-auto p-1 capitalize w-full justify-center text-h6 md:text-h5 tracking-wider">
-            <img class="mr-2" src="{{ asset("/storage/login/google.png") }}" alt="Google Logo">
+            <img class="mr-2" src="{{ asset("/storage/website/login/google.png") }}" alt="Google Logo">
             Continue With Google
         </a>
         <div class="flex items-center m-auto my-5 w-full md:w-1/2">

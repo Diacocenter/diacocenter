@@ -26,7 +26,6 @@ use App\Http\Controllers\RoleController;
 |
 */
 
-
 Route::get("/", [HomeController::class, "index"])->name("homepage");
 
 Route::get("our-story", [HomeController::class, "ourStory"])->name("our-story");

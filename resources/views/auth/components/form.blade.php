@@ -8,7 +8,7 @@
                     <h1 class="text-center mb-5 text-h3 md:text-h2 text-darkSteelGray">Welcome Back</h1>
                     <a href="{{route('third-party.auth.redirect')}}"
                        class="btn bg-white flex items-center border-2 border-darkSteelGray p-1 rounded-lg w-full h-auto justify-center text-h6 md:text-h5 tracking-wider hover:bg-white text-lighSteelGray">
-                        <img class="mr-2" src="{{ asset("/storage/login/google.png") }}" alt="Google Logo">
+                        <img class="mr-2" src="{{ asset("/storage/website/login/google.png") }}" alt="Google Logo">
                         Continue With Google
                     </a>
                     <div class="flex items-center m-auto my-5 w-full md:w-1/2">
@@ -60,7 +60,7 @@
 
     @section('image')
         <picture>
-            <source srcset="{{asset("storage/login/verify.png")}}">
-            <img class="w-full h-full" src="{{asset("storage/login/verify.webp")}}">
+            <source srcset="{{asset("storage/website/login/verify.png")}}">
+            <img class="w-full h-full" src="{{asset("storage/website/login/verify.webp")}}">
         </picture>
     @endsection
