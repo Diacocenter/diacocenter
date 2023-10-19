@@ -107,9 +107,9 @@
 {{--                                            <div>--}}
 {{--                                                <picture>--}}
 {{--                                                    <source class="w-full"--}}
-{{--                                                        srcset="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url . '.png' }}">--}}
+{{--                                                        srcset="{{ asset('/storage/website/home-page/blog') . '/' . $article->thumbnailImage()->first()->url . '.png' }}">--}}
 {{--                                                    <img class="w-full"--}}
-{{--                                                        src="{{ asset('/storage/home-page/blog') . '/' . $article->thumbnailImage()->first()->url . '.webp' }}">--}}
+{{--                                                        src="{{ asset('/storage/website/home-page/blog') . '/' . $article->thumbnailImage()->first()->url . '.webp' }}">--}}
 {{--                                                </picture>--}}
 {{--                                            </div>--}}
 {{--                                            <div class="p-5 h-full flex flex-col justify-between">--}}

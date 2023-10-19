@@ -45,7 +45,7 @@
             @forelse($projects as $project)
                 <li class="splide__slide rounded-lg overflow-hidden shadow">
                     <a href="{{ route("project.show", $project->slug) }}" class="">
-                    <figure><img class="aspect-square	" src="{{ asset('/storage/projects/thumbnails/'. $project->headerImage->url) }}" /></figure>
+                    <figure><img class="aspect-square" src="{{ asset('/storage/projects/thumbnails/'. $project->headerImage->url) }}" /></figure>
                     <div class="card-body">
                         <h2 class="card-title text-lightBlack">{{ $project->title }}</h2>
                         <p class="xl:whitespace-normal lg:whitespace-normal md:whitespace-normal"
@@ -73,7 +73,7 @@
 
     </div>
 {{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/second.png') }}" /></figure>--}}
+{{--        <figure><img class="w-full" src="{{ asset('/storage/website/home-page/images/second.png') }}" /></figure>--}}
 {{--        <div class="card-body">--}}
 {{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
 {{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}
@@ -88,7 +88,7 @@
 {{--        </div>--}}
 {{--    </div>--}}
 {{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/third.png') }}" /></figure>--}}
+{{--        <figure><img class="w-full" src="{{ asset('/storage/website/home-page/images/third.png') }}" /></figure>--}}
 {{--        <div class="card-body">--}}
 {{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
 {{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}
@@ -103,7 +103,7 @@
 {{--        </div>--}}
 {{--    </div>--}}
 {{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/fourth.png') }}" /></figure>--}}
+{{--        <figure><img class="w-full" src="{{ asset('/storage/website/home-page/images/fourth.png') }}" /></figure>--}}
 {{--        <div class="card-body">--}}
 {{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
 {{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}

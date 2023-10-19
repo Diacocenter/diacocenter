@@ -9,8 +9,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-dollar.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-dollar.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-dollar.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-dollar.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">
@@ -24,8 +24,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-eye.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-eye.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-eye.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-eye.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">
@@ -40,8 +40,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-dollar.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-cards.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-dollar.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-cards.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">
@@ -56,8 +56,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-eye.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-eye.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-eye.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-eye.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">
@@ -71,8 +71,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-cards.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-cards.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-cards.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-cards.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">
@@ -86,8 +86,8 @@
         <div class="rounded-lg shadow p-10">
             <div>
                 <picture class="">
-                    <source srcset="{{ asset('/storage/home-page/icon-cards.svg') }}">
-                    <img src="{{ '/storage/home-page/icon-cards.webp' }}" alt="Logo">
+                    <source srcset="{{ asset('/storage/website/home-page/icon-cards.svg') }}">
+                    <img src="{{ '/storage/website/home-page/icon-cards.webp' }}" alt="Logo">
                 </picture>
             </div>
             <div class="my-5 font-semibold	text-h6">

@@ -1,9 +1,9 @@
 <div class="md:container mx-auto">
     <div class="my-10 overflow-hidden relative my-20">
         <picture>
-            <source class="block md:hidden" srcset="{{asset('storage/home-page/header/header.png')}}">
+            <source class="block md:hidden" srcset="{{asset('storage/website/home-page/header/header.png')}}">
             <img class="w-auto h-full lg:w-full lg:h-auto max-w-none"
-                 src="{{asset('storage/home-page/header/header.webp')}}">
+                 src="{{asset('storage/website/home-page/header/header.webp')}}">
         </picture>
         <div class="flex justify-center items-center absolute inset-0">
             <h1 class="text-white tracking-wide text-center sm:text-h1  text-h3 p-3">
