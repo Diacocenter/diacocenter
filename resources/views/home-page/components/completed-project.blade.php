@@ -1,5 +1,8 @@
 {{--@dd($complete_project)--}}
 <section class="container my-20">
+    <div class="text-h3 mt-5">
+        <p class="text-center text-4xl">Complete Project</p>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-1 xl:grid-cols-2 mt-4 gap-x-4 gap-y-4">
         <div class="card w-120 glass bg-extraLightBlue">
             <figure><img class="min-h-[10rem] w-full object-cover" src="{{ asset('/storage/home-page/images/fifth.png') }}" class="w-full" /></figure>
