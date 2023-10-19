@@ -5,7 +5,7 @@
         <tr>
             <td style="color: #666;font-weight: 700;margin-bottom: 10px">
                 <img src="{{asset("storage/email/calendar.png")}}">
-                Jun/12
+                {{ Carbon\Carbon::now()->isoFormat('MMM Do YY') }}
             </td>
         </tr>
         <tr>

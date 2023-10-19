@@ -51,6 +51,13 @@ Route::get("/discover", [HomeController::class, "discover"])->name("discover");
 
 Route::resource('newsletter', NewsletterController::class)->only('store');
 
+Route::get("asghar", function (){
+//    dd("asghat");
+//    $contact = \App\Models\ContactUs::where('last_name', "Asgarian")->first();
+//    return \App\Mail\ContactUsMail::class($contact);
+    return view('emails.contact-us.contact-us');
+});
+
 //projects
 Route::apiResource("project", ProjectController::class)->only("show");
 

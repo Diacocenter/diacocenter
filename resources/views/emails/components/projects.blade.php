@@ -12,10 +12,10 @@
                                     <td>
                                        @if($item->headerImage)
                                             <img style="top: -20px;right: -20px;width: 250px"
-                                                 src="{{asset("storage/projects/". $item->headerImage->url )}}">
+                                                 src="{{asset("storage/projects/thumbnails/". $item->headerImage->url )}}">
                                         @else
                                             <img style="top: -20px;right: -20px;width: 250px"
-                                                 src="{{asset("storage/projects/default.png")}}">
+                                                 src="{{asset("storage/projects/thumbnails/default.png")}}">
                                        @endif
                                     </td>
                                 </tr>

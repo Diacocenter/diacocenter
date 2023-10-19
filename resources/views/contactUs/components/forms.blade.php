@@ -24,7 +24,6 @@
                 @else
                     <p class="text-body1 mx-3 my-5">Our Friendly Team Would Like to Hear from You.</p>
                 @endif
-
             </div>
         </div>
         <form class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 gap-y-3" action="{{ route('contact-us.store') }}" method="POST">
