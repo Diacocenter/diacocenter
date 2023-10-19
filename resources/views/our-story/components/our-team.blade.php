@@ -89,7 +89,7 @@
                 <picture class="">
                     <source class="w-full h-full rounded-lg"
                         srcset="{{ asset('/storage/website/our-story/founders/mahbbobeh-heydari.png') }}"
-                        alt="mahbbobeh-heydari">
+                        alt="mahbobeh-heydari">
                     <img class="w-full h-full rounded-lg"
                         src="{{ asset('/storage/website/our-story/founders/mahbbobeh-heydari.webp') }}" alt="mahbbobeh-heydari">
                 </picture>

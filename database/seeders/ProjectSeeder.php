@@ -161,22 +161,22 @@ class ProjectSeeder extends Seeder
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "concrete-02.jpeg",
+                        "url"        => "concrete-02.webp",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "concrete-03.jpeg",
+                        "url"        => "concrete-03.webp",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "concrete-04.jpeg",
+                        "url"        => "concrete-04.webp",
                         "alt"        => "",
                         "image_type" => ""
                     ],
                     [
-                        "url"        => "concrete-05.jpeg",
+                        "url"        => "concrete-05.webp",
                         "alt"        => "",
                         "image_type" => ""
                     ],
