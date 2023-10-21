@@ -26,8 +26,12 @@ use App\Http\Controllers\RoleController;
 |
 */
 Route::get("/jafar", function () {
-    return view("emails.contact-us.contact-us")->with("user", "Jafar")->with("projects", \App\Models\Project::limit(2)->inRandomOrder()->get());
+    return view("auth.components.inters");
 });
+
+//Route::get("/jafar", function () {
+//    return view("emails.contact-us.contact-us")->with("user", "Jafar")->with("projects", \App\Models\Project::limit(2)->inRandomOrder()->get());
+//});
 
 Route::get("/", [HomeController::class, "index"])->name("homepage");
 
@@ -53,7 +57,7 @@ Route::get("/discover", [HomeController::class, "discover"])->name("discover");
 
 Route::resource('newsletter', NewsletterController::class)->only('store');
 
-Route::get("asghar", function (){
+Route::get("asghar", function () {
 //    dd("asghat");
 //    $contact = \App\Models\ContactUs::where('last_name', "Asgarian")->first();
 //    return \App\Mail\ContactUsMail::class($contact);
@@ -66,10 +70,10 @@ Route::apiResource("project", ProjectController::class)->only("show");
 //blog news
 Route::get("/blog-news", [HomeController::class, "blogNews"])->name("blog-news");
 
-Route::get("/phase/{phase}",[ProjectPhaseController::class, "show"])->name("phase");
+Route::get("/phase/{phase}", [ProjectPhaseController::class, "show"])->name("phase");
 
-Route::get('/auth/google/redirect',[ProviderController::class, 'redirect'])->name("third-party.auth.redirect");
-Route::get('/auth/google/callback',[ProviderController::class, 'callback'])->name("third-party.auth.callback");
+Route::get('/auth/google/redirect', [ProviderController::class, 'redirect'])->name("third-party.auth.redirect");
+Route::get('/auth/google/callback', [ProviderController::class, 'callback'])->name("third-party.auth.callback");
 
 // Authenticated Routes
 Route::group(['middleware' => ['auth']], function () {
