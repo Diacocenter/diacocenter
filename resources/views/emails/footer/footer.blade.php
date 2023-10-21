@@ -18,22 +18,20 @@
                         </p>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <td style="font-weight: 100;font-size: 12px">
-                            <p style="color: black;;margin:0px; ">
-                                <b>Tehran</b>
-                            </p>
-                            <p style="color: black; margin:0px;">
-                                Address: No 27, Gholam Jafari St, Tajrish Sq, Tehran, Iran
-                            </p>
-                            <p style="color: black; margin:0px;">
-                                Number: +98 9120539563
-                            </p>
-                            <p style="color: black; margin:0px;">
-                                P.O.Box: 1989816729
-                            </p>
-                        </td>
+                <tr >
+                    <td style="font-weight: 100;font-size: 12px;padding-top: 1rem">
+                        <p style="color: black;;margin:0px; ">
+                            <b>Tehran</b>
+                        </p>
+                        <p style="color: black; margin:0px;">
+                            Address: No 27, Gholam Jafari St, Tajrish Sq, Tehran, Iran
+                        </p>
+                        <p style="color: black; margin:0px;">
+                            Number: +98 9120539563
+                        </p>
+                        <p style="color: black; margin:0px;">
+                            P.O.Box: 1989816729
+                        </p>
                     </td>
                 </tr>
             </table>
@@ -57,22 +55,26 @@
                             <tr>
                                 <td>
                                     <a href="#">
-                                        <img style="margin: 0 10px 0 0" src="{{asset("storage/website/emails/icon/linkedin.svg")}}">
+                                        <img style="margin: 0 10px 0 0"
+                                             src="{{asset("storage/website/emails/icon/linkedin.svg")}}">
                                     </a>
                                 </td>
                                 <td>
                                     <a>
-                                        <img style="margin: 0 10px" src="{{asset("storage/website/emails/icon/facebook.svg")}}">
+                                        <img style="margin: 0 10px"
+                                             src="{{asset("storage/website/emails/icon/facebook.svg")}}">
                                     </a>
                                 </td>
                                 <td>
                                     <a>
-                                        <img style="margin: 0 10px" src="{{asset("storage/website/emails/icon/instagram.svg")}}">
+                                        <img style="margin: 0 10px"
+                                             src="{{asset("storage/website/emails/icon/instagram.svg")}}">
                                     </a>
                                 </td>
                                 <td>
                                     <a>
-                                        <img style="margin: 0 0 0 10px" src="{{asset("storage/website/emails/icon/email.svg")}}">
+                                        <img style="margin: 0 0 0 10px"
+                                             src="{{asset("storage/website/emails/icon/email.svg")}}">
                                     </a>
                                 </td>
                             </tr>

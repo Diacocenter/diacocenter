@@ -9,7 +9,7 @@
                     <td>
                         <table>
                             <tr>
-                                <td style="font-weight: 200; padding-left: 350px; padding-top:10px;">{{ \Carbon\Carbon::now()->isoFormat('MMMM Do YYYY') }}</td>
+                                <td style="font-weight: 600; padding-left: 340px; padding-top:10px;">{{ \Carbon\Carbon::now()->isoFormat('MMMM Do YYYY') }}</td>
                             </tr>
                         </table>
                     </td>
@@ -20,7 +20,7 @@
     </tr>
     <tr>
         <td>
-            <img style="margin-top: 20px; margin-left: 12px;" src="{{asset("storage/website/emails/image/header.png")}}">
+            <img style="margin-top: 20px;width:100%" src="{{asset("storage/website/emails/image/header.png")}}">
         </td>
     </tr>
 </table>

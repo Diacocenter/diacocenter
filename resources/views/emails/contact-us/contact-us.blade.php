@@ -9,7 +9,7 @@
             </td>
         </tr>
         <tr>
-            <td style="font-weight: bold;color: #403F3F;font-size: 20px;">
+            <td style="font-weight: bold;color: #403F3F;font-size: 20px;margin-top: 1rem">
                 <p>Contact us:</p>
             </td>
         </tr>
