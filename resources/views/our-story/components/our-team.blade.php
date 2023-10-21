@@ -55,7 +55,7 @@
                 <div class="absolute bottom-0 our-team-details w-full px-7 py-3  md:hidden team-box flex flex-row-reverse justify-between">
                     <span class="flex flex-col items-end justify-end gap-3">
                         <a href="https://www.linkedin.com/in/mohammadmehdi-jabari-836b4178/"><img class="w-5"  src="{{asset('storage/website/our-story/linkedin.svg') }}"></a>
-                        <a href="mailto:mohammad@diacocenter.com"><img class="w-5" src="{{asset('storage/website/our-story/email.svg') }}"></a>
+                        <a href="mailto:mohammadmehdi@diacocenter.com"><img class="w-5" src="{{asset('storage/website/our-story/email.svg') }}"></a>
                     </span>
                     <span>
                         <h5 class="text-body2  text-white">Mohammad Mehdi Jabari</h5>
@@ -95,8 +95,8 @@
                 </picture>
                 <div class="absolute bottom-0 our-team-details w-full px-7 py-3  md:hidden team-box flex flex-row-reverse justify-between">
                     <span class="flex flex-col items-end justify-end gap-3">
-                        <a href="#"><img class="w-5"  src="{{asset('storage/website/our-story/linkedin.svg') }}"></a>
-                        <a href="mailto:mahbbobeh@diacocenter.com"><img class="w-5" src="{{asset('storage/website/our-story/email.svg') }}"></a>
+                        <a href="https://www.linkedin.com/in/seyedeh-mahboobeh-heidary-8b7168291/"><img class="w-5"  src="{{asset('storage/website/our-story/linkedin.svg') }}"></a>
+                        <a href="mailto:mahbobeh@diacocenter.com"><img class="w-5" src="{{asset('storage/website/our-story/email.svg') }}"></a>
                     </span>
                     <span>
                         <h5 class="text-body2  text-white team-text">Mahboobeh Heydari</h5>
