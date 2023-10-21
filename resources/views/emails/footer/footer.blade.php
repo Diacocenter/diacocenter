@@ -4,32 +4,32 @@
             <table style="margin-left:20px;">
                 <tr>
                     <td style="font-weight: 100;font-size: 12px">
-                        <p style="margin: 0; color: black;">
+                        <p style="color: black">
                             <b>Isfahan</b>
                         </p>
-                        <p style="color: black; margin:0px;">
+                        <p style="color: black;">
                             Address: 5C, Tala Complex, Saadat Abad St, Isfahan, Iran
                         </p>
-                        <p style="color: black; margin:0px;">
-                            Number: +98 31311914
-                        </p>
-                        <p style="color: black; margin:0px;">
+                        <a href="tel:00983131311914" style="color: black;text-decoration: none;display: block">
+                            Number:+98 (313) 1311914
+                        </a>
+                        <p style="color: black;">
                             P.O.Box: 8163917854
                         </p>
                     </td>
                 </tr>
                 <tr >
-                    <td style="font-weight: 100;font-size: 12px;padding-top: 1rem">
-                        <p style="color: black;;margin:0px; ">
+                    <td style="font-weight: 100;font-size: 12px">
+                        <p style="color: black; ">
                             <b>Tehran</b>
                         </p>
-                        <p style="color: black; margin:0px;">
+                        <p style="color: black;">
                             Address: No 27, Gholam Jafari St, Tajrish Sq, Tehran, Iran
                         </p>
-                        <p style="color: black; margin:0px;">
-                            Number: +98 9120539563
-                        </p>
-                        <p style="color: black; margin:0px;">
+                        <a href="tel:00989120539563" style="color: black;text-decoration: none;display: block">
+                            Number: +98 (912) 0539563
+                        </a>
+                        <p style="color: black;">
                             P.O.Box: 1989816729
                         </p>
                     </td>

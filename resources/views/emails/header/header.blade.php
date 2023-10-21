@@ -1,4 +1,4 @@
-<table>
+<table style="width: 100%">
     <tr>
         <td>
             <table>
@@ -9,7 +9,7 @@
                     <td>
                         <table>
                             <tr>
-                                <td style="font-weight: 600; padding-left: 340px; padding-top:10px;">{{ \Carbon\Carbon::now()->isoFormat('MMMM Do YYYY') }}</td>
+                                <td style="font-weight: 600; padding-left: 420px; padding-top:10px;">{{ \Carbon\Carbon::now()->isoFormat('MMMM Do YYYY') }}</td>
                             </tr>
                         </table>
                     </td>

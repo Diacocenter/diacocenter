@@ -25,6 +25,9 @@ use App\Http\Controllers\RoleController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get("/jafar", function () {
+    return view("emails.contact-us.contact-us")->with("user", "Jafar")->with("projects", \App\Models\Project::limit(2)->inRandomOrder()->get());
+});
 
 Route::get("/", [HomeController::class, "index"])->name("homepage");
 
