@@ -4,7 +4,7 @@ import {AutoScroll} from '@splidejs/splide-extension-auto-scroll';
 import "./our-story.js";
 import "./login-animation.js";
 import "./login.js";
-
+import "./public/App.tsx";
 
 if (document.getElementById('blog-splide')) {
     const blog = new Splide('#blog-splide', {

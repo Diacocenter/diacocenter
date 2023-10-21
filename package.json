@@ -7,6 +7,7 @@
     },
     "devDependencies": {
         "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.1.0",
         "axios": "^1.4.0",
         "daisyui": "^3.5.1",
         "laravel-vite-plugin": "^0.7.5",
@@ -28,7 +29,6 @@
         "@splidejs/splide": "^4.1.4",
         "@splidejs/splide-extension-auto-scroll": "^0.5.3",
         "@splinetool/runtime": "^0.9.436",
-        "@vitejs/plugin-react": "^4.0.3",
         "animate.css": "^4.1.1",
         "animejs": "^3.2.1",
         "autoprefixer": "^10.4.15",
