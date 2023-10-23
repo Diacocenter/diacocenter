@@ -4,19 +4,19 @@
     <div class="container mx-auto bg-white">
         <div class="flex flex-row mt-20 shadow overflow-hidden rounded-lg">
             <div
-                class="relative flex flex-grow-1 w-64 flex-col bg-white text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
+                class="relative flex flex-grow-1 m-auto w-64 flex-col bg-white text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
                 <h1 class="text-h2 mb-5 text-darkSteelGray">Choose Role</h1>
                 <p class="text-body2 text-lightSteelBlue">Your Registration Process Has Just Completed Successfully.</p>
                 <form class="text-black mt-5" action="{{ route('roles') }}" method="POST">
                     @csrf
                     <div class="flex flex-wrap md:flex-nowrap md:gap-12">
                         <div class="basis-full md:basis-1/2 mt-5">
-                            <div class="form-check shadow p-0 h-full border-2 border-extraLightGray rounded-xl p-2">
+                            <div class="form-check shadow p-0 h-full rounded-xl">
                                 <input type="radio" class="btn-check hidden peer" name="role" id="technology-provider"
                                     autocomplete="off"
                                     value="provider">
                                 <label
-                                    class="text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent border-0 btn btn-outline h-full pb-2 checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
+                                        class="border-2 border-extraLightGray rounded-xl text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent border-0 peer-checked:border-accent btn btn-outline h-full p-2 hover:border-primary hover:bg-white hover:text-black peer-checked:text-black"
                                     for="technology-provider">
                                     <p class="text-h6">Provider</p>
                                     <p class="text-subtitle text-start tracking-wide">I’m a technology provider who
@@ -27,12 +27,12 @@
                             </div>
                         </div>
                         <div class="basis-full md:basis-1/2 mt-5">
-                            <div class="form-check shadow p-0 h-full border-2 border-extraLightGray rounded-xl p-2">
+                            <div class="form-check shadow p-0 h-full rounded-xl">
                                 <input type="radio" class="btn-check hidden peer" name="role" id="technology-seeker"
                                     autocomplete="off"
                                     value="seeker">
                                 <label
-                                    class="text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent border-0 peer-checked:border-accent btn btn-outline h-full pb-2 checked:bg-primary p-2 hover:border-accent hover:bg-white hover:text-black"
+                                    class="border-2 border-extraLightGray rounded-xl text-trolleyGrey flex flex-col w-full h-full peer-checked:bg-accent border-0 peer-checked:border-accent btn btn-outline h-full p-2 hover:border-primary hover:bg-white hover:text-black peer-checked:text-black"
                                     for="technology-seeker">
                                     <p class="text-h6">Seeker</p>
                                     <p class="text-subtitle text-start tracking-wide">I’m a technology seeker who

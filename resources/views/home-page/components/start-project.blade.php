@@ -40,8 +40,8 @@
             <div class="flex justify-between flex-col">
                 <div>
                     <picture class="">
-                        <source srcset="{{ asset('/storage/home-page/icon-truck.svg') }}">
-                        <img src="{{ '/storage/home-page/icon-truck.webp' }}" alt="Logo">
+                        <source srcset="{{ asset('/storage/website/home-page/icon-truck.svg') }}">
+                        <img src="{{ '/storage/website/home-page/icon-truck.webp' }}" alt="Logo">
                     </picture>
                 </div>
                 <div class="text-h6 font-semibold mt-2">
@@ -66,8 +66,8 @@
             <div class="flex justify-between flex-col">
                 <div>
                     <picture class="">
-                        <source srcset="{{ asset('/storage/home-page/icon-chat.svg') }}">
-                        <img src="{{ '/storage/home-page/icon-chat.webp' }}" alt="Logo">
+                        <source srcset="{{ asset('/storage/website/home-page/icon-chat.svg') }}">
+                        <img src="{{ '/storage/website/home-page/icon-chat.webp' }}" alt="Logo">
                     </picture>
                 </div>
                 <div class="text-h6 font-semibold mt-2">

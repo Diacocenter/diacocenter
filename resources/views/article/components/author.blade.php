@@ -8,14 +8,6 @@
             <p class="text-caption fw-medium text-justify my-5">
                 {{ $article->user->about_me }}
             </p>
-            {{--            <div class="flex justify-content-evenly bg-secondary text-white py-1">--}}
-            {{--                @forelse($article->user->socialMedia()->get() as $socialMedia)--}}
-            {{--                    <a href="{{ $socialMedia->pivot->address }}">--}}
-            {{--                        <i class="fa-brands text-white fa-solid fa-{{$socialMedia->title}} text-white fa-2xl"></i>--}}
-            {{--                    </a>--}}
-            {{--                @empty--}}
-            {{--                @endforelse--}}
-            {{--            </div>--}}
         </div>
     </div>
 </div>

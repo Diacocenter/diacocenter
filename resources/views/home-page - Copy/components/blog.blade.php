@@ -10,9 +10,9 @@
                             <div>
                                 <picture>
                                     <source class="w-full"
-                                            srcset="{{ asset("/storage/home-page/blog") . "/" . $article->thumbnailImage()->first()->url}}">
+                                            srcset="{{ asset("/storage/website/home-page/blog") . "/" . $article->thumbnailImage()->first()->url}}">
                                     <img class="w-full"
-                                         src="{{ asset("/storage/home-page/blog") . "/" .  $article->thumbnailImage()->first()->url}}">
+                                         src="{{ asset("/storage/website/home-page/blog") . "/" .  $article->thumbnailImage()->first()->url}}">
                                 </picture>
                             </div>
                             <div class="p-5 h-full flex flex-col justify-between">

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mx-auto bg-white">
         <div class="flex flex-row mt-20 overflow-hidden justify-center shadow rounded-lg">
-            <div class="relative flex flex-col justify-center bg-white text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
+            <div class="relative m-auto flex flex-col justify-center bg-white text-center text-black tracking-wider p-5 form-items p-8 h-full w-full lg:w-1/2">
                 <h1 class="text-h2 mb-5 text-darkSteelGray">Who Are You</h1>
                 <p class="text-body2"> Chooser Your Role As An Individual Or Behalf Of A Company
                 </p>
@@ -15,7 +15,7 @@
                                 <input type="radio" class="btn-check hidden peer" name="is_cooperational" id="technology-provider"
                                     autocomplete="off"
                                     value={{boolval("true")}}>
-                                <label class="text-elementalGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent border-lightGray rounded h-full p-2 hover:text-black"
+                                <label class="text-elementalGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent border-lightGray rounded h-full p-2 hover:text-black peer-checked:text-black"
                                     for="technology-provider">
                                     <p class="text-h4">A Company</p>
                                     <p class="text-body2  tracking-wide"> I open this account on behalf of a company.
@@ -29,7 +29,7 @@
                                 <input type="radio" class="btn-check hidden peer" name="is_cooperational" id="technology-seeker"
                                     autocomplete="off"
                                     value={{boolval("false")}}>
-                                <label class="text-elementalGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent rounded h-full pb-2 checked:bg-primary p-2 hover:text-black "
+                                <label class="text-elementalGrey flex flex-col w-full h-full peer-checked:bg-accent peer-checked:border-accent rounded h-full pb-2 checked:bg-primary p-2 hover:text-black peer-checked:text-black "
                                     for="technology-seeker">
                                     <p class="text-h4">A Person</p>
                                     <p class="text-body2  tracking-wide">I open this account on my behalf.</p>

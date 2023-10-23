@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="col-span-24">
-                        <button type="submit" class="btn btn-primary text-white w-full rounded-lg mt-8 text-h6">
+                        <button type="submit" class="btn btn-primary text-black w-full rounded-lg mt-8 text-h6">
                             Done
                         </button>
                     </div>

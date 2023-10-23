@@ -1,5 +1,5 @@
 <header class="container text-white">
-    <div style="background-image:url( {{asset("/storage/home-page/hero-new.webp")}})" class="rounded-2xl min-h-screen bg-cover md:bg-right">
+    <div style="background-image:url( {{asset("/storage/website/home-page/hero-new.webp")}})" class="rounded-2xl min-h-screen bg-cover lg:bg-right">
         <div class=""></div>
         <div class=" text-left">
             <div class="py-16 px-10">

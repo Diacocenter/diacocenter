@@ -232,7 +232,7 @@
                     <li class="font-semibold"><a href="{{route("contact-us.index")}}">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="navbar-end w-auto hidden lg:flex">
+            <div class="navbar-end xl:w-auto hidden lg:flex">
                 @auth
                     <a href="{{route("login")}}"
                         class="btn btn-blueBayoux border-2 border-blueBayoux m-2 text-blueBayoux bg-inherit hover:btn-success px-5">Panel</a>
