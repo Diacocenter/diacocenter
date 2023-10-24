@@ -1,5 +1,5 @@
-{{--<div id="explorer_project"></div>--}}
-<section class="container mt-32 mb-14">
+<div id="explorer-search"></div>
+<!-- <section class="container mt-32 mb-14">
     <div class="form-control ">
         <div class="input-group justify-center">
             <input type="text" placeholder="Search Problem"
@@ -38,7 +38,8 @@
         </div>
     </div>
 </section>
-<!--splide should be added-->
+
+
 <div id="project" class="container splide">
     <div class="splide__track pb-3">
         <ul class="splide__list">
@@ -72,50 +73,6 @@
         </ul>
 
     </div>
-{{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/second.png') }}" /></figure>--}}
-{{--        <div class="card-body">--}}
-{{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
-{{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}
-{{--            <div class="card-actions justify-between">--}}
-{{--                <div>Price</div>--}}
-{{--                <div>9000$</div>--}}
-{{--            </div>--}}
-{{--            <div class="card-actions justify-between text-gray">--}}
-{{--                <div>HelioPower</div>--}}
-{{--                <div>6 days ago</div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/third.png') }}" /></figure>--}}
-{{--        <div class="card-body">--}}
-{{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
-{{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}
-{{--            <div class="card-actions justify-between">--}}
-{{--                <div>Price</div>--}}
-{{--                <div>9000$</div>--}}
-{{--            </div>--}}
-{{--            <div class="card-actions justify-between text-gray">--}}
-{{--                <div>GeneGen</div>--}}
-{{--                <div>2 weeks ago</div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="card w-85 glass">--}}
-{{--        <figure><img class="w-full" src="{{ asset('/storage/home-page/images/fourth.png') }}" /></figure>--}}
-{{--        <div class="card-body">--}}
-{{--            <h2 class="card-title text-lightBlack">Automated warehouse!</h2>--}}
-{{--            <p>These facilities use complex robotic systems and AI for automatic storage and retrieval of items. Conveyor systems, pick and place robots, and inventory management software are key technologies.pp.</p>--}}
-{{--            <div class="card-actions justify-between">--}}
-{{--                <div>Price</div>--}}
-{{--                <div>9000$</div>--}}
-{{--            </div>--}}
-{{--            <div class="card-actions justify-between text-gray">--}}
-{{--                <div>PowerPlus</div>--}}
-{{--                <div>3 weeks ago</div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-</div>
+
+</div> -->
 

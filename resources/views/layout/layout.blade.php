@@ -33,6 +33,7 @@
     @yield("content")
 @includeIf("footer.footer")
 
+@viteReactRefresh
 @vite(["resources/scss/public.scss", "resources/js/public.js"])
 </body>
 </html>

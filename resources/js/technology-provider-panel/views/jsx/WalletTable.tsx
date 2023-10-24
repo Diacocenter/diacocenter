@@ -13,14 +13,19 @@ import FormatAlignLeftOutlinedIcon from "@mui/icons-material/FormatAlignLeftOutl
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import IconButton from "@mui/material/IconButton";
+import { useRef,useState} from "react";
 
-const StyledTableCell = styled(TableCell)(({theme}) => ({
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: "#e9f6ff",
         color: "#000",
+        borderColor: "#e9f6ff",
+        width: "auto",
+        borderBottom: "2px solid black"
     },
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14,
+        borderColor: "#e9f6ff",
     },
 }));
 
@@ -48,6 +53,21 @@ const backgroundColors = (status) => {
     return backgroundColor;
 };
 export default function WalletForm() {
+    const divRef = useRef();
+    const [paddingRight, setPaddingRight] = useState("");
+        // -----------scroll bar ------------
+        React.useEffect(() => {
+            if (divRef.current) {
+                const clientHeight = divRef.current.clientHeight;
+                if (clientHeight <= 300) {
+                    setPaddingRight("9px");
+                } else {
+                    setPaddingRight("0px");
+                }
+            }
+        });
+        // -----------end scroll bar ------------
+
     return (
         <>
             <Box
@@ -61,178 +81,156 @@ export default function WalletForm() {
                     Recent Invoices
                 </Typography>
             </Box>
-            <TableContainer>
-                <Table
-                    sx={{ mt: 2 , height:"100%"}}
-                    aria-label="customized table"
+            <Box
+                 sx={{
+                    backgroundColor: "#e9f6ff",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    paddingLeft: "9px",
+                    paddingRight : paddingRight,
+                    mt:2
+                }}
+            >
+                <TableContainer
+                    className="scrollbarInputs"
+                    ref={divRef}                          
+                    sx={{
+                        
+                        overflowY: "auto",
+                        maxHeight: "43vh",
+                    }}
                 >
-                    <TableHead>
-                        <TableRow>
-                            
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <CalendarTodayOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Date
-                                </Typography>
-                            </StyledTableCell>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <FormatAlignLeftOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    InvoiceNumber
-                                </Typography>
-                            </StyledTableCell>
-                            
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <FormatListBulletedOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Status
-                                </Typography>
-                            </StyledTableCell>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <PersonOutlineOutlinedIcon
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Amount
-                                </Typography>
-                            </StyledTableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row) => (
-                            <TableRow
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                key={row.Date}
-                            >
+                    <Table
+                        stickyHeader
+                        aria-label="customized table"
+                    >
+                        <TableHead>
+                            <TableRow>
+                                
                                 <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-                                    }}
-                                    align="center"
-                                    >
-                                  {row.Date}
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-                                    }}
-                                    align="center"
-                                >
-                                    {row.InvoiceNumber}
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        py:1.5
-                                    }}
+                                    
                                     align="center"
                                 >
                                     <Typography
-                                    variant="body2"
                                         sx={{
-                                            backgroundColor: backgroundColors(
-                                                row.Status
-                                            ),
-                                            width: 2 / 3,
-                                            margin: "auto",
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
                                         }}
-                                        align="center"
                                     >
-                                        {row.Status}
+                                        <CalendarTodayOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Date
                                     </Typography>
                                 </StyledTableCell>
                                 <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-                                    }}
+                                     
                                     align="center"
                                 >
-                                    {row.Amount}
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <FormatAlignLeftOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        InvoiceNumber
+                                    </Typography>
+                                </StyledTableCell>
+                                
+                                <StyledTableCell
+                                    
+                                    align="center"
+                                >
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <FormatListBulletedOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Status
+                                    </Typography>
+                                </StyledTableCell>
+                                <StyledTableCell
+                                    
+                                    align="center"
+                                >
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <PersonOutlineOutlinedIcon
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Amount
+                                    </Typography>
                                 </StyledTableCell>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                        </TableHead>
+                        <TableBody>
+                            {rows.map((row) => (
+                                <TableRow
+                                   
+                                    key={row.Date}
+                                >
+                                    <StyledTableCell
+                                        
+                                        >
+                                    {row.Date}
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                        
+                                    >
+                                        {row.InvoiceNumber}
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                       
+                                    >
+                                        <Typography
+                                        variant="body2"
+                                            sx={{
+                                                backgroundColor: backgroundColors(
+                                                    row.Status
+                                                ),
+                                                width: 2 / 3,
+                                                margin: "auto",
+                                            }}
+                                            align="center"
+                                        >
+                                            {row.Status}
+                                        </Typography>
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                       
+                                        
+                                        
+                                    >
+                                        {row.Amount}
+                                    </StyledTableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Box>
         </>
     );
 }

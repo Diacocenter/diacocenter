@@ -75,3 +75,36 @@
     margin-bottom: 5%;
     border-radius: 7px;
 }
+
+
+/* ----------------------------------------------------------------- */
+
+.scrollbarInputs {
+    overflow-y: auto;
+    scroll-margin-right: 15px;
+    /* padding-right: 0.25rem; */
+}
+
+
+.scrollbarInputs::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+    /* background-color: #EAEEF3; */
+    background-color: transparent;
+    
+}
+
+.scrollbarInputs::-webkit-scrollbar {
+    width: 10px;
+    
+    
+}
+
+.scrollbarInputs::-webkit-scrollbar-thumb {
+    border: 3.5px solid transparent;
+    background-clip: content-box;
+    border-radius: 10px;
+    width: 7px;
+   
+    background-color: rgb(158, 145, 145);
+}

@@ -17,14 +17,22 @@ import {useQuery} from "react-query";
 import axios from "./../../../axiosConfig.js";
 import {route} from "./../../helpers.js"
 import {Link} from "react-router-dom";
+import { useRef,useState} from "react";
+
+
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
         backgroundColor: "#e9f6ff",
         color: "#000",
+        borderColor: "#e9f6ff",
+        width: "auto",
+        borderBottom: "2px solid black"
     },
     [`&.${tableCellClasses.body}`]: {
         fontSize: 14,
+        borderColor: "#e9f6ff",
     },
 }));
 
@@ -38,6 +46,21 @@ function createData(
 }
 
 export default function Projects() {
+    const divRef = useRef();
+    const [paddingRight, setPaddingRight] = useState("");
+
+    // -----------scroll bar ------------
+    React.useEffect(() => {
+        if (divRef.current) {
+            const clientHeight = divRef.current.clientHeight;
+            if (clientHeight <= 423) {
+                setPaddingRight("9px");
+            } else {
+                setPaddingRight("0px");
+            }
+        }
+    });
+    // -----------end scroll bar ------------
 
     const ProjectsDetails = useQuery('ProjectsDetails', async () => {
         const {data} = await axios.get(route("api.web.v1.technology-provider-panel.all.project"));
@@ -65,166 +88,150 @@ export default function Projects() {
                     </Typography>
                     <Divider sx={{ mt: 2, mb: 4 }} />
                 </Box>
-                <TableContainer>
-                    <Table
-                        sx={{ minWidth: 700, mt: 3 }}
-                        aria-label="customized table"
+                <Box
+                    sx={{
+                    backgroundColor: "#e9f6ff",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    paddingLeft: "9px",
+                    paddingRight : paddingRight,
+                    mt:2
+                    }}
+                >
+                    <TableContainer
+                         className="scrollbarInputs"
+                         ref={divRef}                          
+                         sx={{
+                             
+                             overflowY: "auto",
+                             maxHeight: "60vh",
+                         }}
                     >
-                        <TableHead>
-                            <TableRow>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        width: "25%",
-                                    }}
-                                    align="center"
-                                >
-                                    <Typography
-                                        sx={{
-                                            display: "flex",
-                                            flexDirection: "row",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <CorporateFareIcon sx={{ mr: 0.5 }} />
-                                        Company Name
-                                    </Typography>
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        width: "25%",
-                                    }}
-                                    align="center"
-                                >
-                                    <Typography
-                                        sx={{
-                                            display: "flex",
-                                            flexDirection: "row",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <DescriptionOutlinedIcon
-                                            sx={{ mr: 0.5 }}
-                                        />
-                                        Project Name
-                                    </Typography>
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        width: "25%",
-                                    }}
-                                    align="center"
-                                >
-                                    <Typography
-                                        sx={{
-                                            display: "flex",
-                                            flexDirection: "row",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <FormatAlignLeftOutlinedIcon
-                                            fontSize="small"
-                                            sx={{ mr: 0.5 }}
-                                        />
-                                        Topic
-                                    </Typography>
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        width: "25%",
-                                    }}
-                                    align="center"
-                                >
-                                    <Typography
-                                        sx={{
-                                            display: "flex",
-                                            flexDirection: "row",
-                                            justifyContent: "center",
-                                            alignItems: "center",
-                                        }}
-                                    >
-                                        <CalendarTodayOutlinedIcon
-                                            fontSize="small"
-                                            sx={{ mr: 0.5 }}
-                                        />
-                                        Finished Date
-                                    </Typography>
-                                </StyledTableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {ProjectsDetails.data.data.map((row) => (
-                                <TableRow
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                    }}
-                                    key={row.companyName}
-                                >
+                        <Table
+                            stickyHeader
+                            aria-label="customized table"
+                        >
+                            <TableHead 
+                                
+                            >
+                                <TableRow>
                                     <StyledTableCell
-                                        sx={{
-                                            border: 1,
-                                            borderColor: "#e9f6ff",
-                                            borderWidth: 3,
-                                        }}
+                                       
                                         align="center"
                                     >
-                                        {row.company_name}
-                                    </StyledTableCell>
-                                    <a href={route("project.show",{project:row.slug})}>
-                                        <StyledTableCell
+                                        <Typography
                                             sx={{
-                                                border: 1,
-                                                borderColor: "#e9f6ff",
-                                                borderWidth: 3,
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                justifyContent: "center",
+                                                alignItems: "center",
                                             }}
-                                            align="center"
                                         >
-                                            {row.title}
-                                        </StyledTableCell>
-                                    </a>
-                                    {/*<StyledTableCell*/}
-                                    {/*    sx={{*/}
-                                    {/*        border: 1,*/}
-                                    {/*        borderColor: "#e9f6ff",*/}
-                                    {/*        borderWidth: 3,*/}
-                                    {/*    }}*/}
-                                    {/*    align="center"*/}
-                                    {/*>*/}
-                                    {/*    {row.category.map((item,index)=>*/}
-                                    {/*    item*/}
-                                    {/*    )}*/}
-                                    {/*</StyledTableCell>*/}
+                                            <CorporateFareIcon sx={{ mr: 0.5 }} />
+                                            Company Name
+                                        </Typography>
+                                    </StyledTableCell>
                                     <StyledTableCell
-                                        sx={{
-                                            border: 1,
-                                            borderColor: "#e9f6ff",
-                                            borderWidth: 3,
-                                        }}
+                                      
                                         align="center"
                                     >
-                                        {row.end_date}
+                                        <Typography
+                                            sx={{
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                            }}
+                                        >
+                                            <DescriptionOutlinedIcon
+                                                sx={{ mr: 0.5 }}
+                                            />
+                                            Project Name
+                                        </Typography>
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                      
+                                        align="center"
+                                    >
+                                        <Typography
+                                            sx={{
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                            }}
+                                        >
+                                            <FormatAlignLeftOutlinedIcon
+                                                fontSize="small"
+                                                sx={{ mr: 0.5 }}
+                                            />
+                                            Topic
+                                        </Typography>
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                       
+                                        align="center"
+                                    >
+                                        <Typography
+                                            sx={{
+                                                display: "flex",
+                                                flexDirection: "row",
+                                                justifyContent: "center",
+                                                alignItems: "center",
+                                            }}
+                                        >
+                                            <CalendarTodayOutlinedIcon
+                                                fontSize="small"
+                                                sx={{ mr: 0.5 }}
+                                            />
+                                            Finished Date
+                                        </Typography>
                                     </StyledTableCell>
                                 </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                            </TableHead>
+                            <TableBody>
+                                {ProjectsDetails.data.data.map((row) => (
+                                    <TableRow
+                                        sx={{
+                                            
+                                            borderColor: "#e9f6ff",
+        
+                                        }}
+                                        key={row.companyName}
+                                    >
+                                        <StyledTableCell
+                                           
+                                            align="center"
+                                        >
+                                            {row.company_name}
+                                        </StyledTableCell>
+                                        
+                                        <StyledTableCell
+                                            
+                                            align="center"
+                                        >
+                                        <a href={route("project.show",{project:row.slug})}>
+                                        {row.title}
+                                        </a>  
+                                        </StyledTableCell>
+                                        
+                                        <StyledTableCell 
+                                           
+                                            align="center"
+                                        >
+                                            {row.end_date}
+                                        </StyledTableCell>
+                                        <StyledTableCell 
+                                            
+                                            align="center"
+                                        >
+                                        </StyledTableCell>
+                                    </TableRow>
+                                ))}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Box>
             </Box>
         </Container>
     );

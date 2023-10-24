@@ -18,6 +18,7 @@ import axios from "axios";
 import {route} from "./../../helpers.js"
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import {Link} from 'react-router-dom'
+import { useRef,useState} from "react";
 
 const StyledTableCell = styled(TableCell)(({theme}) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -38,6 +39,22 @@ const backgroundColors = (status) => {
     return backgroundColor;
 };
 export default function Agreement() {
+    const divRef = useRef();
+    const [paddingRight, setPaddingRight] = useState("");
+
+        // -----------scroll bar ------------
+        React.useEffect(() => {
+            if (divRef.current) {
+                const clientHeight = divRef.current.clientHeight;
+                if (clientHeight <= 423) {
+                    setPaddingRight("9px");
+                } else {
+                    setPaddingRight("0px");
+                }
+            }
+        });
+        // -----------end scroll bar ------------
+
     const Agreements = useQuery('Agreements', async () => {
         const {data} = await axios.get(route("api.web.v1.technology-seeker-panel.agreement.index"));
         Agreements.data = data.data;
@@ -64,182 +81,201 @@ export default function Agreement() {
                 </Link>
             </Box>
             <Divider sx={{mt: 2, mb: 4}}/>
-            <TableContainer>
-                <Table
-                    sx={{minWidth: 700, mt: 0}}
-                    aria-label="customized table"
+            <Box
+                sx={{
+                    backgroundColor: "#e9f6ff",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    paddingLeft: "9px",
+                    paddingRight : paddingRight,
+                    mt:2
+                }}
+            >
+                <TableContainer
+                    className="scrollbarInputs"
+                    ref={divRef}                          
+                    sx={{
+                        
+                        overflowY: "auto",
+                        maxHeight: "60vh",
+                    }}
                 >
-                    <TableHead>
-                        <TableRow>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <FormatAlignLeftOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Title
-                                </Typography>
-                            </StyledTableCell>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <CalendarTodayOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Date
-                                </Typography>
-                            </StyledTableCell>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <PersonOutlineOutlinedIcon
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Link
-                                </Typography>
-                            </StyledTableCell>
-                            <StyledTableCell
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                align="center"
-                            >
-                                <Typography
-                                    sx={{
-                                        display: "flex",
-                                        flexDirection: "row",
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                    }}
-                                >
-                                    <FormatListBulletedOutlinedIcon
-                                        fontSize="small"
-                                        sx={{mr: 0.5}}
-                                    />
-                                    Status
-                                </Typography>
-                            </StyledTableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {Agreements.data.data.map((row) => (
-                            <TableRow
-                                sx={{
-                                    border: 1,
-                                    borderColor: "#e9f6ff",
-                                    borderWidth: 3,
-                                }}
-                                key={row.date}
-                            >
+                    <Table
+                        stickyHeader
+                        aria-label="customized table"
+                    >
+                        <TableHead>
+                            <TableRow>
                                 <StyledTableCell
                                     sx={{
-                                        border: 1,
                                         borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-                                    }}
-                                    align="center"
-                                >
-                                    <Link underline="hover" href="#" color="black" >
-                                        {row.title}
-                                        <IconButton size="small" aria-label="Example" >
-                                            <OpenInNewIcon fontSize="small"/>
-                                        </IconButton>
-                                    </Link>
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-                                    }}
-                                    align="center"
-                                >
-                                    {row.date}
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        borderWidth: 3,
-                                        py:1.5
-
-                                    }}
-                                    align="center"
-                                >
-                                    {row.link}
-                                </StyledTableCell>
-                                <StyledTableCell
-                                    sx={{
-                                        border: 1,
-                                        borderColor: "#e9f6ff",
-                                        py:1.5
-
+                                        width: "auto",
+                                        borderBottom: "2px solid black"
                                     }}
                                     align="center"
                                 >
                                     <Typography
                                         sx={{
-                                            backgroundColor: backgroundColors(
-                                                row.status
-                                            ),
-                                            width: 1 / 2,
-                                            margin: "auto",
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
                                         }}
-                                        align="center"
                                     >
-                                        {(row.status===0)?("Pending"):(row.status===1)?("Confirmed"):("Canceled")}
+                                        <FormatAlignLeftOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Title
+                                    </Typography>
+                                </StyledTableCell>
+                                <StyledTableCell
+                                    sx={{
+                                        borderColor: "#e9f6ff",
+                                        width: "auto",
+                                        borderBottom: "2px solid black"
+                                    }}
+                                    align="center"
+                                >
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <CalendarTodayOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Date
+                                    </Typography>
+                                </StyledTableCell>
+                                <StyledTableCell
+                                    sx={{
+                                        borderColor: "#e9f6ff",
+                                        width: "auto",
+                                        borderBottom: "2px solid black"
+                                    }}
+                                    align="center"
+                                >
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <PersonOutlineOutlinedIcon
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Link
+                                    </Typography>
+                                </StyledTableCell>
+                                <StyledTableCell
+                                    sx={{
+                                        borderColor: "#e9f6ff",
+                                        width: "auto",
+                                        borderBottom: "2px solid black"
+                                    }}
+                                    align="center"
+                                >
+                                    <Typography
+                                        sx={{
+                                            display: "flex",
+                                            flexDirection: "row",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}
+                                    >
+                                        <FormatListBulletedOutlinedIcon
+                                            fontSize="small"
+                                            sx={{mr: 0.5}}
+                                        />
+                                        Status
                                     </Typography>
                                 </StyledTableCell>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
+                        </TableHead>
+                        <TableBody>
+                            {Agreements.data.data.map((row) => (
+                                <TableRow
+                                    sx={{
+                                        border: 1,
+                                        borderColor: "#e9f6ff",
+                                        borderWidth: 3,
+                                    }}
+                                    key={row.date}
+                                >
+                                    <StyledTableCell
+                                        sx={{
+                                            border: 1,
+                                            borderColor: "#e9f6ff",
+                                            borderWidth: 3,
+                                            py:1.5
+                                        }}
+                                        align="center"
+                                    >
+                                        <Link underline="hover" href="#" color="black" >
+                                            {row.title}
+                                            <IconButton size="small" aria-label="Example" >
+                                                <OpenInNewIcon fontSize="small"/>
+                                            </IconButton>
+                                        </Link>
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                        sx={{
+                                            border: 1,
+                                            borderColor: "#e9f6ff",
+                                            borderWidth: 3,
+                                            py:1.5
+                                        }}
+                                        align="center"
+                                    >
+                                        {row.date}
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                        sx={{
+                                            border: 1,
+                                            borderColor: "#e9f6ff",
+                                            borderWidth: 3,
+                                            py:1.5
+
+                                        }}
+                                        align="center"
+                                    >
+                                        {row.link}
+                                    </StyledTableCell>
+                                    <StyledTableCell
+                                        sx={{
+                                            border: 1,
+                                            borderColor: "#e9f6ff",
+                                            py:1.5
+
+                                        }}
+                                        align="center"
+                                    >
+                                        <Typography
+                                            sx={{
+                                                backgroundColor: backgroundColors(
+                                                    row.status
+                                                ),
+                                                width: 1 / 2,
+                                                margin: "auto",
+                                            }}
+                                            align="center"
+                                        >
+                                            {(row.status===0)?("Pending"):(row.status===1)?("Confirmed"):("Canceled")}
+                                        </Typography>
+                                    </StyledTableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Box>
         </Container>
     );
 }

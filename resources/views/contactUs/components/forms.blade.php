@@ -18,15 +18,18 @@
             <div>
                 <p class="text-h2 md:text-h1 mx-3 ">Contact Us</p>
             </div>
-            <div>
+            <div >
                 @if(Session::get('successful'))
-                    <div class="text-green-600 text-xl">{{Session::get('successful')}}</div>
+                    <!-- <div class="text-green-600 text-xl">{{Session::get('successful')}}</div> -->
+                    <div class="flex justify-center w-full">
+                        <div class="alert alert-success flex flex-col justify-center w-[90%] mt-3 pt-8 pb-16">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-16 w-16" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span class="text-lg">{{Session::get('successful')}}</span>
+                        </div>
+                    </div>
                 @else
                     <p class="text-body1 mx-3 my-5">Our Friendly Team Would Like to Hear from You.</p>
-                @endif
-            </div>
-        </div>
-        <form class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 gap-y-3" action="{{ route('contact-us.store') }}" method="POST">
+                    <form class="grid grid-cols-1 md:grid-cols-2 md:gap-x-5 gap-y-3" action="{{ route('contact-us.store') }}" method="POST">
             @csrf
             <div class="col-span-2 md:col-span-1 mx-3">
 {{--                <label class="label">--}}
@@ -82,6 +85,11 @@
                 <button type="submit" class="btn btn-primary text-white text-h5 text-center px-10 capitalize rounded-lg">Send Message</button>
             </div>
         </form>
+                @endif
+
+            </div>
+        </div>
+
 
 
     </div>
