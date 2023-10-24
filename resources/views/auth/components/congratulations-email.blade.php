@@ -15,7 +15,7 @@
 
 @section('image')
     <picture>
-        <source srcset="{{asset("storage/login/congratulations-verify.png")}}">
-        <img class="w-100 rounded-r-lg" src="{{asset("storage/login/congratulations-verify.webp")}}">
+        <source srcset="{{asset("storage/website/login/congratulations-verify.png")}}">
+        <img class="w-100 rounded-r-lg" src="{{asset("storage/website/login/congratulations-verify.webp")}}">
     </picture>
 @endsection

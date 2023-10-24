@@ -26,7 +26,6 @@ use App\Http\Controllers\RoleController;
 |
 */
 
-
 Route::get("/", [HomeController::class, "index"])->name("homepage");
 
 Route::get("our-story", [HomeController::class, "ourStory"])->name("our-story");
@@ -50,6 +49,13 @@ Route::get("/faq", [HomeController::class, "faq"])->name("faq");
 Route::get("/discover", [HomeController::class, "discover"])->name("discover");
 
 Route::resource('newsletter', NewsletterController::class)->only('store');
+
+Route::get("asghar", function (){
+//    dd("asghat");
+//    $contact = \App\Models\ContactUs::where('last_name', "Asgarian")->first();
+//    return \App\Mail\ContactUsMail::class($contact);
+    return view('emails.contact-us.contact-us');
+});
 
 //projects
 Route::apiResource("project", ProjectController::class)->only("show");

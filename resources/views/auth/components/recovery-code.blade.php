@@ -45,7 +45,7 @@
 
 @section('image')
     <picture>
-        <source srcset="{{asset("storage/login/forget-pass.png")}}">
-        <img class="w-100 rounded-r-lg" src="{{asset("storage/login/forget-pass.webp")}}">
+        <source srcset="{{asset("storage/website/login/forget-pass.png")}}">
+        <img class="w-100 rounded-r-lg" src="{{asset("storage/website/login/forget-pass.webp")}}">
     </picture>
 @endsection

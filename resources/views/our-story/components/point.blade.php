@@ -18,11 +18,11 @@
             <div class="grid grid-cols-1">
                 <div class="grid grid-cols-3 gap-x-6 my-10 xl:mt-16">
                     <picture class="col-span-3 xl:col-span-2">
-                        <source class="rounded-lg h-full" srcset="{{asset("/storage/website/our-story/beginning.png")}}" >
-                        <img class="rounded-lg h-full" src="{{asset("/storage/website/our-story/beginning.webp")}}" alt="begining">
+                        <source class="rounded-lg md:h-full" srcset="{{asset("/storage/website/our-story/beginning.png")}}" >
+                        <img class="rounded-lg md:h-full" src="{{asset("/storage/website/our-story/beginning.webp")}}" alt="begining">
                     </picture>
                     <div class="col-span-3 xl:col-span-1">
-                        <p class="text-h3 mb-5 leading-10 ">
+                        <p class="text-h3 my-5 leading-10 ">
                             In The Beginning
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
@@ -36,7 +36,7 @@
                 </div>
                 <div class="grid grid-cols-3 gap-x-6 my-10 xl:mt-16">
                     <div class="col-span-3 xl:col-span-1 order-2 xl:order-1">
-                        <p class=" mb-5 text-h3 leading-10">
+                        <p class=" my-5 text-h3 leading-10">
                             Becoming a Business Model
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
@@ -47,17 +47,17 @@
                         </p>
                     </div>
                     <picture class="col-span-3 xl:col-span-2 order-1 xl:order-2">
-                        <source class="rounded-lg h-full" srcset="{{asset("/storage/website/our-story/business-model.png")}}" >
-                        <img class="rounded-lg h-full" src="{{asset("/storage/website/our-story/business-model.webp")}}">
+                        <source class="rounded-lg md:h-full" srcset="{{asset("/storage/website/our-story/business-model.png")}}" >
+                        <img class="rounded-lg md:h-full" src="{{asset("/storage/website/our-story/business-model.webp")}}">
                     </picture>
                 </div>
                 <div class="grid grid-cols-3 gap-x-6 my-10 xl:mt-16">
                     <picture class="col-span-3 xl:col-span-2">
-                        <source class="rounded-lg h-full" srcset="{{asset("/storage/website/our-story/professional-team.png")}}" >
-                        <img class="rounded-lg h-full" src="{{asset("/storage/website/our-story/professional-team.webp")}}">
+                        <source class="rounded-lg md:h-full" srcset="{{asset("/storage/website/our-story/professional-team.png")}}" >
+                        <img class="rounded-lg md:h-full" src="{{asset("/storage/website/our-story/professional-team.webp")}}">
                     </picture>
                     <div class="col-span-3 xl:col-span-1">
-                        <p class="text-h3 mb-5 leading-10">
+                        <p class="text-h3 my-5 leading-10">
                             Gathering a Professional Team
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
@@ -70,7 +70,7 @@
                 </div>
                 <div class="grid grid-cols-3 gap-x-6 my-10 xl:mt-16">
                     <div class="col-span-3 xl:col-span-1  order-2 xl:order-1">
-                        <p class="text-h3 mb-5 leading-10">
+                        <p class="text-h3 my-5 leading-10">
                             What it Became
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
@@ -82,8 +82,8 @@
                         </p>
                     </div>
                     <picture class="col-span-3 xl:col-span-2  order-1 xl:order-2">
-                        <source class="rounded-lg h-full" srcset="{{asset("/storage/website/our-story/became.png")}}" >
-                        <img class="rounded-lg h-full" src="{{asset("/storage/website/our-story/became.webp")}}">
+                        <source class="rounded-lg md:h-full" srcset="{{asset("/storage/website/our-story/became.png")}}" >
+                        <img class="rounded-lg md:h-full" src="{{asset("/storage/website/our-story/became.webp")}}">
                     </picture>
                 </div>
                 <div class="mt-16">

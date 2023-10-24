@@ -17,7 +17,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap flex flex-col flex-nowrap"
                                     for="oil">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/oil.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/oil.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Oil & Gas
                                     </p>
@@ -32,7 +32,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap "
                                     for="it">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/it.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/it.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         IT
                                     </p>
@@ -47,7 +47,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="ai">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/ai.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/ai.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         AI
                                     </p>
@@ -62,7 +62,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="chemistry">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/chemistry.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/chemistry.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Chemistry
                                     </p>
@@ -77,7 +77,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="civil">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/civil.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/civil.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Civil
                                     </p>
@@ -92,7 +92,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="material">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/material.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/material.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Material
                                         Engineering
@@ -108,7 +108,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="electronics">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/elc.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/elc.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Electronics
                                     </p>
@@ -123,7 +123,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="polymer">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/polymer.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/polymer.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Polymer
                                     </p>
@@ -138,7 +138,7 @@
                                 >
                                 <label class="btn bg-white outline-offset-1 outline-lightGray peer-checked:bg-accent peer-checked:outline-accent hover:outline-accent hover:bg-white rounded-lg h-full flex flex-col flex-nowrap"
                                     for="chemistry">
-                                    <img class="w-2/3" src="{{ asset('/storage/login/inters/blockchain.png') }}">
+                                    <img class="w-2/3" src="{{ asset('/storage/website/login/inters/blockchain.png') }}">
                                     <p class="text-h6 text-blueBlack font-normal text-center pt-1">
                                         Blockchain
                                     </p>
@@ -163,7 +163,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0" for="oil">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/oil.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/oil.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Oil & Gas--}}
                 {{--                            </p>--}}
@@ -177,7 +177,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="it">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/it.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/it.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                IT--}}
                 {{--                            </p>--}}
@@ -191,7 +191,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="ai">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/ai.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/ai.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                AI--}}
                 {{--                            </p>--}}
@@ -205,7 +205,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="chemistry">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/chemistry.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/chemistry.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Chemistry--}}
                 {{--                            </p>--}}
@@ -219,7 +219,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="civil">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/civil.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/civil.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Civil--}}
                 {{--                            </p>--}}
@@ -233,7 +233,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100  " for="material">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/material.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/material.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center lh-1  pt-1">--}}
                 {{--                                Material--}}
                 {{--                                Engineering--}}
@@ -250,7 +250,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="electronics">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/elc.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/elc.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Electronics--}}
                 {{--                            </p>--}}
@@ -264,7 +264,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="polymer">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/polymer.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/polymer.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Polymer--}}
                 {{--                            </p>--}}
@@ -278,7 +278,7 @@
                 {{--                               value="technology_provider"--}}
                 {{--                               checked>--}}
                 {{--                        <label class="btn btn-outline rounded-lg h-100 ps-0 pe-0 " for="blockchain">--}}
-                {{--                            <img class="w-2/3" src="{{ asset('/storage/login/inters/blockchain.png') }}">--}}
+                {{--                            <img class="w-2/3" src="{{ asset('/storage/website/login/inters/blockchain.png') }}">--}}
                 {{--                            <p class="fs-9 fw-normal text-center pt-1">--}}
                 {{--                                Blockchain--}}
                 {{--                            </p>--}}
@@ -302,7 +302,7 @@
 
             </div>
             <div class="xl:flex lg:hidden md:hidden hidden flex-1 w-64">
-                <img class='max-w-full max-h-full object-cover rounded-r-lg' src="{{ asset('/storage/login/login-background.png') }}" alt="">
+                <img class='max-w-full max-h-full object-cover rounded-r-lg' src="{{ asset('/storage/website/login/login-background.png') }}" alt="">
             </div>
         </div>
     </div>
@@ -310,5 +310,5 @@
 
 
 @section('image')
-    <img class="w-0 w-md-100" src="{{ asset('/storage/login/ball.png') }}">
+    <img class="w-0 w-md-100" src="{{ asset('/storage/website/login/ball.png') }}">
 @endsection

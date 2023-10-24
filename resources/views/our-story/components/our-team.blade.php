@@ -89,7 +89,7 @@
                 <picture class="">
                     <source class="w-full h-full rounded-lg"
                         srcset="{{ asset('/storage/website/our-story/founders/mahbbobeh-heydari.png') }}"
-                        alt="mahbbobeh-heydari">
+                        alt="mahbobeh-heydari">
                     <img class="w-full h-full rounded-lg"
                         src="{{ asset('/storage/website/our-story/founders/mahbbobeh-heydari.webp') }}" alt="mahbbobeh-heydari">
                 </picture>
@@ -153,7 +153,7 @@
     </div>
 
     <h1 class="text-center mb-10 mt-20 text-h2">Development Team</h1>
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-5">
+    <div class="grid grid-cols-2 gap-5 md:grid-cols-2 lg:grid-cols-5">
         <div class="col-span-1">
             <div class="relative p-0 overflow-hidden our-team rounded-lg">
                 <picture class="">

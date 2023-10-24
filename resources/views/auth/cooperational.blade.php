@@ -45,7 +45,7 @@
                 </form>
             </div>
             <div class="relative flex flex-1 flex-col hidden lg:block">
-                <img class="w-full h-full" src="{{ asset('storage/login/login-background.png') }}">
+                <img class="w-full h-full" src="{{ asset('storage/website/login/login-background.png') }}">
             </div>
         </div>
     </div>
@@ -55,8 +55,8 @@
 @section('image')
     <div class="p-0">
         <picture>
-            <source srcset="http://diacocenter.test/storage/login/verify.png">
-            <img class="w-100" src="http://diacocenter.test/storage/login/verify.webp">
+            <source srcset="http://diacocenter.test/storage/website/login/verify.png">
+            <img class="w-100" src="http://diacocenter.test/storage/website/login/verify.webp">
         </picture>
     </div>
 @endsection

@@ -53,7 +53,7 @@
                 </form>
             </div>
             <div class="relative flex flex-1 w-32 flex-col hidden lg:block">
-                <img class="max-w-full max-h-full w-full" src="{{ asset('storage/login/login-background.png') }}">
+                <img class="max-w-full max-h-full w-full" src="{{ asset('storage/website/login/login-background.png') }}">
             </div>
         </div>
     </div>

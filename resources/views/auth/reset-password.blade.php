@@ -69,7 +69,7 @@
 
 @section('image')
     <picture>
-        <source srcset="{{asset("storage/login/set-new-pass.png")}}">
-        <img class="w-100" src="{{asset("storage/login/set-new-pass.webp")}}">
+        <source srcset="{{asset("storage/website/login/set-new-pass.png")}}">
+        <img class="w-100" src="{{asset("storage/website/login/set-new-pass.webp")}}">
     </picture>
 @endsection
