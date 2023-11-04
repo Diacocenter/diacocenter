@@ -24,17 +24,35 @@ import Avatar from "@mui/material/Avatar";
 import ListItemText from "@mui/material/ListItemText";
 import SearchIcon from "@mui/icons-material/Search";
 import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
-import avatarPic from "../../components/assets/avatar.png";
 import ChatComponent from "./ChatComponent";
-import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import EmptyChat from "./EmptyChat";
+import Pusher from 'pusher-js';
+
 
 export default function Communication() {
-    const [chat, setChat] = React.useState({});
+    const [chat, setChat] = React.useState([]);
+    const [lists, setLists] = React.useState([])
     const code = new URLSearchParams(window.location.search).get("q");
-    // console.log(code, " href");
-
     const [messages, setMessages] = React.useState([]);
+    const [display ,setDisplay] = React.useState([])
+
+
+    useEffect(() => {
+        const pusher = new Pusher('998cd86aba308d8997d4', {
+            cluster: 'eu',
+            forceTLS: true,
+        });
+        const channel = pusher.subscribe('chat');
+        channel.bind('message', (data) => {
+            console.log(data)
+            setChat(prev => {
+                return {...prev, data: prev.data ? prev.data.concat(data) : [data]}
+            })
+        });
+    }, [])
+
+
     const Communication = useQuery(
         "Communication",
         async () => {
@@ -44,10 +62,10 @@ export default function Communication() {
                 )
             );
             Communication.data = data.data;
-            console.log(Communication.data);
+            setLists(Communication.data)
+            setDisplay(lists)
             return Communication;
-        },
-        { refetchInterval: 3000 }
+        }
     );
 
     const CommunicationMessage = useMutation(
@@ -68,6 +86,37 @@ export default function Communication() {
             onSettled: () => {},
         }
     );
+
+    const CommunicationTabs = useMutation(async (data) => {
+            const response = await axios.get(route("api.web.v1.technology-provider-panel.tabs", {role: data}))
+            return response.data;
+        },
+        {
+            onSuccess: (data) => {
+                setLists(data.data)
+            },
+            onError: () => {
+            },
+            onSettled: () => {
+            },
+        }
+    );
+
+    const provider = lists.filter(item=>item.role === "provider")
+    const seeker = lists.filter(item=>item.role === "seeker")
+    const allContact = (data)=>{
+        if (data === "seeker"){
+            setDisplay(seeker)
+        }if (data==="provider"){
+            setDisplay(provider)
+        }if (data==="all")
+            setDisplay(lists)
+    }
+
+    useEffect(() => {
+        setDisplay(lists)
+    }, [lists])
+
     useEffect(() => {
         if (code) {
             CommunicationMessage.mutate(code);
@@ -90,13 +139,26 @@ export default function Communication() {
     }));
     const [value, setValue] = React.useState(0);
 
+    const check = (finded) => {
+        setChat(finded);
+        let clickedChat = lists.find(item => item.assigned_name === finded.name) ? lists.find(item => item.assigned_name === finded.name) : null;
+        if (clickedChat) {
+            console.log("mutate");
+            CommunicationMessage.mutate(clickedChat.communication_id);
+        }
+    }
+
+    const back = () => {
+        setChat([])
+    }
+
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
     if (Communication.isLoading) {
         return <div>loading.....</div>;
     }
-
     return (
         <Box sx={{ m: 0, p: 0, height: "100%", display: "flex", flexGrow: 1 }}>
             <Grid container sx={{ height: "100%" }}>
@@ -143,6 +205,7 @@ export default function Communication() {
                                                         .length
                                                 }
                                                 color="primary"
+                                                onClick={() => allContact("all")}
                                             >
                                                 <Typography
                                                     variant="body2"
@@ -171,6 +234,7 @@ export default function Communication() {
                                             <StyledBadge
                                                 badgeContent={2}
                                                 color="primary"
+                                                onClick={()=>allContact("seeker")}
                                             >
                                                 <Typography
                                                     variant="body2"
@@ -199,6 +263,7 @@ export default function Communication() {
                                             <StyledBadge
                                                 badgeContent={4}
                                                 color="primary"
+                                                onClick={()=>allContact("provider")}
                                             >
                                                 <Typography
                                                     variant="body2"
@@ -283,7 +348,7 @@ export default function Communication() {
                                 className="scrollbarThin"
                                 sx={{ flex: "1 1 auto", overflowY: "scroll" }}
                             >
-                                {Communication.data.data.map(
+                                {display.map(
                                     (profile, index) => (
                                         <ListItem
                                             sx={{
@@ -320,16 +385,13 @@ export default function Communication() {
                                                         },
                                                     }}
                                                     primary={
-                                                        profile.assigned_fname +
-                                                            " " +
-                                                            profile.assigned_lname ||
-                                                        "Username"
+                                                        profile.assigned_name
                                                     }
                                                     primaryTypographyProps={{
                                                         variant: "body2",
                                                     }}
                                                     secondary={
-                                                        profile.assigned_role ||
+                                                        profile.role ||
                                                         "Role"
                                                     }
                                                     secondaryTypographyProps={{
@@ -388,18 +450,17 @@ export default function Communication() {
                     {/*{(Object.keys(Chat.information).length)?(""):(<CommunicationChat messages={messages} />)}*/}
                     {Object.keys(chat).length ? (
                         <ChatComponent
+                            back={back}
                             information={chat.data}
                             image={chat.image}
                             role={chat.role}
                             name={chat.name}
-                            id={Communication.data.data.map(
-                                (profile, index) => profile.communication_id
-                            )}
+                            id={chat.communication_id}
+                            userid={chat.id}
                         />
                     ) : (
-                        "Please Select A Chat"
+                        <EmptyChat check={check}/>
                     )}
-                    {/*<CommunicationChatInput onSendMessage={handleSendMessage} />*/}
                 </Grid>
             </Grid>
         </Box>

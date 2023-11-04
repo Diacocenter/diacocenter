@@ -340,7 +340,6 @@ export default function MainDrawer() {
         const {data} = await axios.get(route("api.web.v1.technology-provider-panel.general-info"));
         GeneralInfo.data = data.data;
         dispatch(getInfo(GeneralInfo.data));
-        console.log(GeneralInfo.data)
         return GeneralInfo;
     },{refetchInterval:3000});
 

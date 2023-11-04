@@ -13,6 +13,5 @@ export function route(name, params = {}, page = null , pageSize= null) {
     if(typeof(page) === "number") {
         result.uri = result.uri + "?page=" + page + "&pageSize=" + pageSize;
     }
-    console.log(result.uri)
     return import.meta.env.VITE_APP_URL + "/" + result.uri;
 }
