@@ -24,6 +24,7 @@ use App\Models\ProjectPhase;
 use App\Models\User;
 use App\Models\UserWorkExperience;
 use App\Notifications\ResetPasswordNotification;
+use App\Observers\CommunicationRecordObserver;
 use App\Observers\ContactUsObserve;
 use App\Observers\ProjectObserver;
 use App\Observers\ProjectPhaseObserver;
@@ -80,9 +81,10 @@ class EventServiceProvider extends ServiceProvider
         ContactUs::observe(ContactUsObserve::class);
         UserWorkExperience::observe(UserWorkExperienceObserver::class);
         User::observe(UserObserver::class);
-        CommunicationRecord::observe(UserCommunicationObserver::class);
+//        CommunicationRecord::observe(UserCommunicationObserver::class);
         Project::observe(ProjectObserver::class);
         ProjectPhase::observe(ProjectPhaseObserver::class);
+        CommunicationRecord::observe(CommunicationRecordObserver::class);
     }
 
     /**

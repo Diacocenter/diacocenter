@@ -11,6 +11,7 @@ use App\Notifications\ResetPasswordNotification;
 use App\Traits\Slugable;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -64,6 +65,10 @@ class User extends Authenticatable implements LaratrustUser, MustVerifyEmail
         "sex"
     ];
 
+    protected $appends = [
+        'name'
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -105,6 +110,13 @@ class User extends Authenticatable implements LaratrustUser, MustVerifyEmail
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    protected function name(): Attribute
+    {
+        return Attribute::make(
+            get: fn(mixed $value, array $attributes) => ucfirst($attributes['first_name']) . " " . ucfirst($attributes['last_name']),
+        );
     }
 
     public function sendEmailVerificationNotification() {

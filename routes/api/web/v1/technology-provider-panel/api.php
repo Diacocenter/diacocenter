@@ -36,40 +36,44 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->name('api.web.v1.technology-provider-panel.')->group(function () {
 
-        Route::prefix('account-info')->group(function () {
+    Route::prefix('account-info')->group(function () {
 
-            Route::get("general-info",[ReduxController::class , "index"])->name("general-info");
+        Route::get("general-info", [ReduxController::class, "index"])->name("general-info");
 
-            Route::get("activities", [ProviderActivitiesController::class , "index"])->name("activities");
+        Route::get("activities", [ProviderActivitiesController::class, "index"])->name("activities");
 
-            Route::get("project", [ProviderProjectController::class, "index"])->name('project');
+        Route::get("project", [ProviderProjectController::class, "index"])->name('project');
 
-            Route::get("all-project", [ProviderProjectController::class, "show"])->name('all.project');
+        Route::get("all-project", [ProviderProjectController::class, "show"])->name('all.project');
 
-            Route::put("change-password/{user:slug}", [UpdateUserPassword::class, "update"])->name("change-password");
+        Route::put("change-password/{user:slug}", [UpdateUserPassword::class, "update"])->name("change-password");
 
-            Route::apiResource("details", UserController::class)->only(['index', 'update']);
+        Route::apiResource("details", UserController::class)->only(['index', 'update']);
 
-            Route::post("getSlug", [UserController::class,'getSlug'])->name('getSlug');
+        Route::post("getSlug", [UserController::class, 'getSlug'])->name('getSlug');
 
-            Route::apiResource("agreements", ProviderAgreementController::class)->only(['index', 'show', 'update']);
+        Route::apiResource("agreements", ProviderAgreementController::class)->only(['index', 'show', 'update']);
 
-            Route::apiResource("social-address", ProviderSocialMediaController::class)->only(["index", "store", "update", "destroy"]);
+        Route::apiResource("social-address", ProviderSocialMediaController::class)->only(["index", "store", "update", "destroy"]);
 
-            Route::apiResource("documents", ProviderDocumentController::class)->only(["index", "store", "destroy"]);
+        Route::apiResource("documents", ProviderDocumentController::class)->only(["index", "store", "destroy"]);
 
-            Route::apiResource("experience", ProviderExperienceController::class)->only(["index", "store", "destroy"])->parameters(['experience'=>'userWorkExperience']);
+        Route::apiResource("experience", ProviderExperienceController::class)->only(["index", "store", "destroy"])->parameters(['experience' => 'userWorkExperience']);
 
-            Route::apiResource("country", CountryController::class)->only(["index"]);
+        Route::apiResource("country", CountryController::class)->only(["index"]);
 
-            Route::apiResource("education", ProviderEducationController::class)->only(["index", "store", "destroy"])->parameters(['education'=>'userEducation']);
+        Route::apiResource("education", ProviderEducationController::class)->only(["index", "store", "destroy"])->parameters(['education' => 'userEducation']);
 
-            Route::apiResource("communication", ProviderCommunicationController::class)->only(["index","show","update"]);
+        Route::apiResource("temporary-file", TemporaryFileController::class)->only(["store", "destroy"]);
 
-            Route::apiResource("temporary-file", TemporaryFileController::class)->only(["store", "destroy"]);
-
-            Route::apiResource("dashboard", DashboradController::class)->only("index");
-
-        });
+        Route::apiResource("dashboard", DashboradController::class)->only("index");
 
     });
+
+    Route::get("communication/role/{role}", [ProviderCommunicationController::class, "tabs"])->name("tabs");
+
+    Route::apiResource("communication", ProviderCommunicationController::class)->only(["index", "show", "update", "store"]);
+
+    Route::post("search", [ProviderCommunicationController::class, "search"])->name("search");
+
+});

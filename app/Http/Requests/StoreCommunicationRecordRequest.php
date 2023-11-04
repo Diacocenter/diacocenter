@@ -22,7 +22,9 @@ class StoreCommunicationRecordRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "message"      =>  ["required", "min:1", "max:550"],
+            "assign"     =>  ["max:150", "exists:users,id"],
+            "message"      =>  ["required", "min:1", "max:550"]
+
         ];
     }
 }

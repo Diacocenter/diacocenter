@@ -28,12 +28,31 @@ import avatarPic from "../../components/assets/avatar.png";
 import ChatComponent from "./ChatComponnet";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Pusher from "pusher-js";
+import EmptyChat from "./EmptyChat";
 
 export default function Communication() {
     const [chat, setChat] = React.useState({});
     const [id, setId] = React.useState();
     const [messages, setMessages] = React.useState([]);
+    const [lists, setLists] = React.useState([])
+    const [display ,setDisplay] = React.useState([])
     const code = new URLSearchParams(window.location.search).get("q");
+
+
+    useEffect(() => {
+        const pusher = new Pusher('998cd86aba308d8997d4', {
+            cluster: 'eu',
+            forceTLS: true,
+        });
+        const channel = pusher.subscribe('chat');
+        channel.bind('message', (data) => {
+            console.log(data)
+            setChat(prev => {
+                return {...prev, data: prev.data ? prev.data.concat(data) : [data]}
+            })
+        });
+    }, [])
 
     const Communication = useQuery(
         "Communication",
@@ -42,9 +61,9 @@ export default function Communication() {
                 route("api.web.v1.technology-seeker-panel.communication.index")
             );
             Communication.data = data.data;
+            setLists(Communication.data)
             return Communication;
         },
-        { refetchInterval: 3000 }
     );
 
     const CommunicationMessage = useMutation(
@@ -65,6 +84,38 @@ export default function Communication() {
             onSettled: () => {},
         }
     );
+
+    const provider = lists.filter(item=>item.role === "provider")
+    const seeker = lists.filter(item=>item.role === "seeker")
+    const allContact = (data)=>{
+        if (data === "seeker"){
+            setDisplay(seeker)
+        }if (data==="provider"){
+          setDisplay(provider)
+        }if (data==="all")
+           setDisplay(lists)
+    }
+
+    // const provider = lists.filter(item=>item.role === "provider")
+
+    const CommunicationTabs = useMutation(async (data) => {
+            const response = await axios.get(route("api.web.v1.technology-seeker-panel.tabs", {role: data}))
+            return response.data;
+        },
+        {
+            onSuccess: (data) => {
+                setLists(data.data)
+            },
+            onError: () => {
+            },
+            onSettled: () => {
+            },
+        }
+    );
+
+    useEffect(() => {
+        setDisplay(lists)
+    }, [lists])
 
     useEffect(() => {
         if (code) {
@@ -92,10 +143,23 @@ export default function Communication() {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
+
+    const check = (finded) => {
+        console.log(finded)
+        setChat(finded);
+        let clickedChat = lists.find(item => item.assigned_name === finded.name) ? lists.find(item => item.assigned_name === finded.name) : null;
+        if (clickedChat) {
+            console.log("mutate");
+            CommunicationMessage.mutate(clickedChat.communication_id);
+        }
+    }
+
+    const back = () => {
+        setChat([])
+    }
     if (Communication.isLoading) {
         return <div>loading.....</div>;
     }
-
     return (
         <Box sx={{ m: 0, p: 0, height: "100%", display: "flex", flexGrow: 1 }}>
             <Grid container sx={{ height: "100%" }}>
@@ -147,6 +211,7 @@ export default function Communication() {
                                                 sx={{
                                                     textTransform: "capitalize",
                                                 }}
+                                                onClick={() => allContact("all")}
                                             >
                                                 All
                                             </Typography>
@@ -172,6 +237,7 @@ export default function Communication() {
                                                 sx={{
                                                     textTransform: "capitalize",
                                                 }}
+                                                onClick={()=>allContact("seeker")}
                                             >
                                                 Seeker
                                             </Typography>
@@ -197,6 +263,7 @@ export default function Communication() {
                                                 sx={{
                                                     textTransform: "capitalize",
                                                 }}
+                                                onClick={()=>allContact("provider")}
                                             >
                                                 Provider
                                             </Typography>
@@ -271,7 +338,7 @@ export default function Communication() {
                                 className="scrollbarThin"
                                 sx={{ flex: "1 1 auto", overflowY: "scroll" }}
                             >
-                                {Communication.data.data.map(
+                                {display.map(
                                     (profile, index) => (
                                         <ListItem
                                             sx={{
@@ -307,16 +374,13 @@ export default function Communication() {
                                                         },
                                                     }}
                                                     primary={
-                                                        profile.assigned_fname +
-                                                            " " +
-                                                            profile.assigned_lname ||
-                                                        "Username"
+                                                        profile.assigned_name
                                                     }
                                                     primaryTypographyProps={{
                                                         variant: "body2",
                                                     }}
                                                     secondary={
-                                                        profile.assigned_role ||
+                                                        profile.role ||
                                                         "Role"
                                                     }
                                                     secondaryTypographyProps={{
@@ -373,14 +437,16 @@ export default function Communication() {
                 >
                     {Object.keys(chat).length ? (
                         <ChatComponent
+                            back={back}
                             information={chat.data}
                             image={chat.image}
                             role={chat.role}
                             name={chat.name}
-                            id={id}
+                            id={chat.communication_id}
+                            userid={chat.id}
                         />
                     ) : (
-                        "Please Select A Chat"
+                        <EmptyChat check={check}/>
                     )}
                     {/*<CommunicationChatInput onSendMessage={handleSendMessage} />*/}
                 </Grid>

@@ -47,7 +47,11 @@ Route::middleware('auth:sanctum')->name('api.web.v1.technology-seeker-panel.')->
 
     Route::apiResource("agreement", SeekerAgreementController::class)->only(["index","store"]);
 
-    Route::apiResource("communication", SeekerCommunicationController::class)->only(["index","show","update"]);
+    Route::apiResource("communication", SeekerCommunicationController::class)->only(["index","show","update","store"]);
+
+    Route::post("search", [SeekerCommunicationController::class, "search"])->name("search");
+
+    Route::get("communication/role/{role}",[SeekerCommunicationController::class,"tabs"])->name("tabs");
 
     Route::apiResource("Dashboard", DashboradController::class)->only(["index"]);
 
