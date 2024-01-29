@@ -12,7 +12,7 @@
             <td>
                 <p>Dear <strong>{{ $user->first_name }}</strong>,</p>
                 <p>
-                    We have received a request to reset your password for your account at Diaco Platform.
+                    We have received a request to reset your password for your account at Diaco Center Platform.
                     If you did not initiate this request, ignore this email.
                 </p>
             </td>

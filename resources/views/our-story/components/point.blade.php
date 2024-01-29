@@ -13,7 +13,7 @@
         </div>
         <div class="">
             <h1 class="text-h2 md:text-h1 text-center mt-5 my-5">
-                The Point We Start
+                WHERE WE STARTED
             </h1>
             <div class="grid grid-cols-1">
                 <div class="grid grid-cols-3 gap-x-6 my-10 xl:mt-16">
@@ -28,8 +28,8 @@
                         <p class="font-medium text-body1 leading-relaxed text-justify">
                             In 2012, considering the demand for precise industrial tools that we either created
                             ourselves or received inquiries from our clients, we made the decision to establish
-                            DIACO. One of the first products registered with DIACO was a wire cut machine for
-                            insulation materials. Actually, the idea for the Diaco platform emerged from analyzing
+                            Diaco Center. One of the first products registered with Diaco Center was a wire cut machine for
+                            insulation materials. Actually, the idea for the Diaco Center platform emerged from analyzing
                             the needs and challenges existing in the technology market.
                         </p>
                     </div>
@@ -40,7 +40,7 @@
                             Becoming a Business Model
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
-                            Diaco's team conducted continuous research and analysis to develop a suitable business
+                            Diaco Center's team conducted continuous research and analysis to develop a suitable business
                             model for creating a technology intermediary platform. They conducted market research,
                             studied competitors, and examined user needs to design a business model that provides
                             the best services to users.
@@ -61,7 +61,7 @@
                             Gathering a Professional Team
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
-                            After developing the business model, the Diaco team was formed. The team consisted of
+                            After developing the business model, the Diaco Center team was formed. The team consisted of
                             software developers, technology experts, project managers, marketing specialists, and
                             sales professionals. Each member possessed expertise and experience in the technology
                             and intermediary field.
@@ -74,10 +74,10 @@
                             What it Became
                         </p>
                         <p class="font-medium text-body1 leading-relaxed text-justify">
-                            With the formation of the team, the process of developing the Diaco platform began.
-                            DIACO became an intelligent and efficient platform that connects technology seekers,
+                            With the formation of the team, the process of developing the Diaco Center platform began.
+                            Diaco Center became an intelligent and efficient platform that connects technology seekers,
                             research institutions, and technology producers at an international level. With its
-                            effective artificial intelligence system, DIACO provides you with the best options based
+                            effective artificial intelligence system, Diaco Center provides you with the best options based
                             on your needs.
                         </p>
                     </div>
@@ -89,11 +89,11 @@
                 <div class="mt-16">
                     <p class="text-h3  my-5 text-center">At a Glance</p>
                     <p class=" mt-5 text-body1">
-                        Following the development of the platform, the Diaco team continuously conducted testing and
+                        Following the development of the platform, the Diaco Center team continuously conducted testing and
                         collected user feedback. They made necessary adjustments and improvements to the system and
                         services based on the feedback received. This process has been ongoing until reaches a state of evolution.
-                        From then until now, Diaco center has been successfully shaped and transformed into a platform that offers a wide range of technology-related services to its users.<br>
-                        During the years of our activity at Diaco Company, we had many successful achievements, such
+                        From then until now, Diaco Center center has been successfully shaped and transformed into a platform that offers a wide range of technology-related services to its users.<br>
+                        During the years of our activity at Diaco Center Company, we had many successful achievements, such
                         as:
                     </p>
                     <ul class=" mt-8 text-body1 list-disc list-inside">

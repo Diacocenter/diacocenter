@@ -13,10 +13,10 @@
             <td>
                 <p>Dear <strong>{{ $name }}</strong>,</p>
                 <p>
-                    Thank you for signing up at Diaco. To ensure the security of your account and complete the registration process, we kindly ask you to verify your email address.
+                    Thank you for signing up at Diaco Center. To ensure the security of your account and complete the registration process, we kindly ask you to verify your email address.
                 </p>
                 <p>The code below is for you to complete your verification process.
-                    Do not share this code with anyone and enter it on the Diaco site:
+                    Do not share this code with anyone and enter it on the Diaco Center site:
                 </p>
             </td>
         </tr>
@@ -32,7 +32,7 @@
                 <p style="margin-bottom: 10px;">
                     Once your email address is verified, you will gain full access to your account and all its features. Ignore this email if you don’t create an account!
 
-                    Thank you for choosing the Diaco platform. We look forward to serving you.
+                    Thank you for choosing the Diaco Center platform. We look forward to serving you.
 
                 </p>
             </td>

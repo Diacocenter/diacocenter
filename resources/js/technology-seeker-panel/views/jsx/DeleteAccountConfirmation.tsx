@@ -47,7 +47,7 @@ export default function DeleteAccountConfirmation() {
                             groups and channels that you've created will be
                             orphaned and left without a creator (but admins will
                             retain their rights). Warning! Please only delete
-                            your account if you no longer want to use Diaco
+                            your account if you no longer want to use Diaco Center
                             Platform. If you delete your account now, it may not
                             be possible to sign up again for several days.
                         </Typography>

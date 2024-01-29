@@ -9,7 +9,7 @@
         <tr>
             <td>
                 <p>
-                    A request has been received to change the password of your account at Diaco Platform.
+                    A request has been received to change the password of your account at Diaco Center Platform.
                     <br>
                     if you did NOT initiate the request, ignore this Email.
                 </p>
@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td>
-                Best regard, the Diaco Security Team.
+                Best regard, the Diaco Center Security Team.
             </td>
         </tr>
     </table>

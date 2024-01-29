@@ -4,7 +4,7 @@
     <div
         class=" relative bg-white shadow container text-center text-black tracking-widest p-8 form-items h-full w-full lg:w-1/2 ">
         {{--<div class="register-item animate__animated {{ session()->get('register') ? 'block' : 'hidden' }}">--}}
-        <h1 class="text-center mb-5 text-h3 md:text-h2 text-darkSteelGray">Welcome To Diaco</h1>
+        <h1 class="text-center mb-5 text-h3 md:text-h2 text-darkSteelGray">Welcome To Diaco Center</h1>
         <a href="{{route('third-party.auth.redirect')}}"
            class="btn bg-white flex items-center border-2 border-darkSteelGray text-lightSteelBlue rounded-xl h-auto p-1 capitalize w-full justify-center text-h6 md:text-h5 tracking-wider">
             <img class="mr-2" src="{{ asset("/storage/website/login/google.png") }}" alt="Google Logo">

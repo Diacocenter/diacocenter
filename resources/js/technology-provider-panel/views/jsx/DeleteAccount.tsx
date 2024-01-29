@@ -18,7 +18,7 @@ export default function DeleteAccount() {
                     <Divider sx={{ mt: 1, mb: 2, borderColor: "#000000" }} />
                 </Box>
             <Typography variant="body1" component="h2">
-                If you want to delete your account on Diaco platform, click
+                If you want to delete your account on Diaco Center platform, click
                 on the bottom to continue.
             </Typography>
             <Grid container justifyContent={"center"}>

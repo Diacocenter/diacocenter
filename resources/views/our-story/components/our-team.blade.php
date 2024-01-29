@@ -358,11 +358,10 @@
                     </span>
                     <span>
                         <h5 class="text-body2 text-white">Ehsan Aliakbari</h5>
-                        <p class="text-body2 text-white">Degital Marketing Manager</p>
+                        <p class="text-body2 text-white">Digital Marketing Manager</p>
                     </span>
                 </div>
             </div>
         </div>
-
     </div>
 </div>

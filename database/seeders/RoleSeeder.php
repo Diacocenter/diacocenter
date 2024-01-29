@@ -17,7 +17,7 @@ class RoleSeeder extends Seeder
             [
                 'name' => 'manager',
                 'display_name' => 'Project Manager',
-                'description' => 'User is the owner and manager of the Diaco'
+                'description' => 'User is the owner and manager of the Diaco Center'
             ],
             [
                 'name' => 'admin',

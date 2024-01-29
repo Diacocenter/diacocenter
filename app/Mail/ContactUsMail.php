@@ -35,7 +35,7 @@ class ContactUsMail extends Mailable
             replyTo: [
                 new Address('info@irdiaco.ca', 'Diaco'),
             ],
-            subject: 'Diaco Contact us',
+            subject: 'Diaco Center Contact us',
         );
     }
 

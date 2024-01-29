@@ -19,8 +19,8 @@
 {{--            <img class="w-full h-full" src="{{ asset('/storage/articles/thumbnail/man-work.png') }}" alt="discover">--}}
 {{--        </figure>--}}
 {{--        <div class="card-body pt-2 px-4 pb-4">--}}
-{{--            <h2 class="card-title text-h5 justify-center font-medium">How Diaco Works</h2>--}}
-{{--            <p class=" text-subtitle text-info">Diaco bridging the gap between technology seekers and providers.--}}
+{{--            <h2 class="card-title text-h5 justify-center font-medium">How Diaco Center Works</h2>--}}
+{{--            <p class=" text-subtitle text-info">Diaco Center bridging the gap between technology seekers and providers.--}}
 {{--                Depending on your role as a technology seeker or technology provider, you have a different registration--}}
 {{--                process. For more information--}}
 {{--            </p>--}}
