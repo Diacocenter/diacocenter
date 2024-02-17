@@ -14,10 +14,10 @@
                     <p class="text-2xl	">80</p>
                     <p class="text-base">Problems solved</p>
                 </div>
-                <div>
-                    <p class="text-2xl	">$284,039</p>
-                    <p class="text-base">Turnover</p>
-                </div>
+{{--                <div>--}}
+{{--                    <p class="text-2xl	">$284,039</p>--}}
+{{--                    <p class="text-base">Turnover</p>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
